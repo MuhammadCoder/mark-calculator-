@@ -1,0 +1,6 @@
+framework module Pods_Mark_CalculatorUITests {
+  umbrella header "Pods-Mark CalculatorUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
