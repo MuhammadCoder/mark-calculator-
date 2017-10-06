@@ -24,11 +24,20 @@ class addSemViewController: UIViewController {
     @IBAction func addTest(_ sender: Any) {
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let item = Semester(context: context)
-        item.sem = addTextField.text
-        
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        self.navigationController!.popViewController(animated: true)
+        if (addTextField.text == "")
+        {
+            let alert = UIAlertController(title: "Alert", message: "Error", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler:nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+            
+        else {
+            let item = Semester(context: context)
+            item.sem = addTextField.text
+            
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            self.navigationController!.popViewController(animated: true)
+        }
     }
 
 }

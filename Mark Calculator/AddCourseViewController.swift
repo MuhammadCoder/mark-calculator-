@@ -22,13 +22,21 @@ class AddCourseViewController: UIViewController {
     @IBAction func addBtn(_ sender: Any) {
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let courseItem = Course(context: context)
-        courseItem.name = courseTextField.text
-        
-        sem.addToCourse(courseItem)
-        
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        navigationController!.popViewController(animated: true)
+        if (courseTextField.text == "")
+        {
+            let alert = UIAlertController(title: "Alert", message: "Error", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler:nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else {
+            let courseItem = Course(context: context)
+            courseItem.name = courseTextField.text
+            
+            sem.addToCourse(courseItem)
+            
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            navigationController!.popViewController(animated: true)
+        }
         
     }
 
