@@ -13,6 +13,7 @@ class AddCourseViewController: UIViewController {
     @IBOutlet var courseTextField: UITextField!
     
     var sem:Semester!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

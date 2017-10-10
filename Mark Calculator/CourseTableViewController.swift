@@ -12,7 +12,6 @@ import CoreData
 class CourseTableViewController: UITableViewController {
     
     var sem:Semester!
-    
     var course: [Course] = []
 
     override func viewDidLoad() {
@@ -21,11 +20,9 @@ class CourseTableViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+         self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,12 +30,6 @@ class CourseTableViewController: UITableViewController {
         tableView.reloadData()
     }
  
-    // MARK: - Table view data source
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        return 0
-//    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
         return course.count
@@ -76,17 +67,36 @@ class CourseTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let courseItem = course[indexPath.row]
+        
         if editingStyle == .delete {
+            managedContext.delete(courseItem)
+            
+            do {
+                try managedContext.save()
+            }catch {
+                print("error")
+            }
+            
+            do {
+                course = try managedContext.fetch(Course.fetchRequest()) as! [Course]
+            } catch {
+                print("error")
+            }
+            
+             tableView.reloadData()
+            
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+ 
 
     /*
     // Override to support rearranging the table view.

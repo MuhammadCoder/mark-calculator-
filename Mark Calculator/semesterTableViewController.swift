@@ -21,11 +21,10 @@ class semesterTableViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-//         self.clearsSelectionOnViewWillAppear = false
+         self.clearsSelectionOnViewWillAppear = false
 
-//         self.navigationItem.rightBarButtonItem = self.editButtonItem
+         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
 
     override func viewWillAppear(_ animated: Bool) {
 
@@ -33,7 +32,6 @@ class semesterTableViewController: UITableViewController {
         tableView.reloadData()
     }
 
-   
 //    override func numberOfSections(in tableView: UITableView) -> Int {
 //        // #warning Incomplete implementation, return the number of sections
 //        return 0
@@ -75,15 +73,6 @@ class semesterTableViewController: UITableViewController {
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-////        if let destination = segue.destination as? MySemester {
-////            if let lableTest = sender as? String {
-////                destination.selectedSong = lableTest
-////            }
-////        }
-//    }
-    
 
     /*
     // Override to support conditional editing of the table view.
@@ -94,15 +83,34 @@ class semesterTableViewController: UITableViewController {
     */
 
     
-    // Override to support editing the table view.
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            // Delete the row from the data source
+//     Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let semItem = semesters[indexPath.row];
+        if editingStyle == .delete {
+            managedContext.delete(semItem)
+            
+            do {
+                try managedContext.save()
+            }catch {
+                print("Error");
+            }
+            
+            do {
+                semesters = try managedContext.fetch(Semester.fetchRequest()) as! [Semester]
+            } catch {
+                print("Error")
+            }
+            
+            tableView.reloadData();
+            
+            // Delete the row from the data source
 //            tableView.deleteRows(at: [indexPath], with: .fade)
-//        } else if editingStyle == .insert {
-//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-//        }    
-//    }
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
     
     /*
     // Override to support rearranging the table view.
