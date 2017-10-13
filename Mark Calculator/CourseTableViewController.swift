@@ -22,7 +22,7 @@ class CourseTableViewController: UITableViewController {
 
          self.clearsSelectionOnViewWillAppear = false
 
-         self.navigationItem.rightBarButtonItem = self.editButtonItem
+//         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +42,11 @@ class CourseTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = course1.name
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cour = course[indexPath.row]
+        performSegue(withIdentifier: "addItem", sender: cour)
     }
     
     func getCourse() {
@@ -97,7 +102,6 @@ class CourseTableViewController: UITableViewController {
         }    
     }
  
-
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
@@ -123,10 +127,5 @@ class CourseTableViewController: UITableViewController {
             let destination = segue.destination as! AddCourseViewController
             destination.sem = sem
         }
-        
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
- 
-
 }
