@@ -4,23 +4,17 @@ PODS:
   - Material (2.8.1):
     - Material/Core (= 2.8.1)
   - Material/Core (2.8.1)
-  - SideMenu (2.3.3)
-  - SwiftIcons (1.5.1)
 
 DEPENDENCIES:
   - DynamicColor (~> 3.3)
   - IBAnimatable (~> 4.1)
   - Material (~> 2.8)
-  - SideMenu (~> 2.3)
-  - SwiftIcons (~> 1.5)
 
 SPEC CHECKSUMS:
   DynamicColor: 3cdaa1e01c16e93ba744e0630f768373e0fc7a7d
   IBAnimatable: 0fd2c9fd38c4798d71bcc18dbd87d473a7df2577
   Material: cc27757e6c91999ac41b2089769106a9d83364c0
-  SideMenu: a447554ae5c982e8077666389e1c8b0c8656e065
-  SwiftIcons: 287593643898af5a9ef16be4b1f9cf91a436cbc7
 
-PODFILE CHECKSUM: 842f9a812edf2fe7ec78ffc83c3c1d627b9d3106
+PODFILE CHECKSUM: fe6bfb2c057db9ac85d70127addf4df0c0f21879
 
 COCOAPODS: 1.2.1

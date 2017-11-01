@@ -2,20 +2,20 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Course" representedClassName="Course" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="course1" inverseEntity="Item" syncable="YES"/>
         <relationship name="sem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Semester" inverseName="course" inverseEntity="Semester" syncable="YES"/>
     </entity>
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="courseItem" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="mark" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="worth" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="course1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="item" inverseEntity="Course" syncable="YES"/>
     </entity>
     <entity name="Semester" representedClassName="Semester" syncable="YES" codeGenerationType="class">
         <attribute name="sem" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="course" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="sem" inverseEntity="Course" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Course" positionX="-36" positionY="18" width="128" height="75"/>
+        <element name="Course" positionX="-36" positionY="18" width="128" height="90"/>
+        <element name="Item" positionX="-189" positionY="45" width="128" height="75"/>
         <element name="Semester" positionX="-344" positionY="18" width="128" height="75"/>
-        <element name="Item" positionX="-189" positionY="45" width="128" height="90"/>
     </elements>
 </model>

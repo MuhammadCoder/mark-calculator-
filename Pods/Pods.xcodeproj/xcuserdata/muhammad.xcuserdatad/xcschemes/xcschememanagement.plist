@@ -44,79 +44,8 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SideMenu.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftIcons-SwiftIcons.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftIcons.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>043B3904684A4B5B472581B6D9649FCC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1959D0A117F2FBB2EAC66774CFE2E043</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>19864AB8F7B8E9064740E008772C4404</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4DB37FDD6D9682249FC26FBD3DF9EBE9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>51DFAE27DE8BF7FE03B1063BD62993B3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>626676DED32EC69D866DE9FA8354F39B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>67E68878F474C375F89FE2D48A99FF1A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9D7C37B6432EBAFEFEF8A4BA226E0078</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A48DC7FAA0F70A48EED373FDEF60C42C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A69B1551367364681746368C259DAA06</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FC792CD37570B7122568149AAF40AF05</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

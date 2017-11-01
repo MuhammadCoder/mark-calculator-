@@ -30,6 +30,7 @@ class AddCourseViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
         else {
+            
             let courseItem = Course(context: context)
             courseItem.name = courseTextField.text
             

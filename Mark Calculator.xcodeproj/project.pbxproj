@@ -11,6 +11,8 @@
 		523D99E81F8E749E00E7F5A9 /* ItemTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */; };
 		5271F0F11F386AD1005003AB /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5271F0F01F386AD1005003AB /* Icon-App-60x60@3x.png */; };
 		5271F1321F40EED9005003AB /* semesterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271F1311F40EED9005003AB /* semesterTableViewController.swift */; };
+		527A30451FA930E200AD5116 /* testTableVCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A30441FA930E200AD5116 /* testTableVCTableViewController.swift */; };
+		527A30471FA9F5AC00AD5116 /* itemsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A30461FA9F5AC00AD5116 /* itemsVC.swift */; };
 		529363A51F618D7A000CE58A /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5293639A1F618D7A000CE58A /* Icon-App-20x20@1x.png */; };
 		529363A61F618D7A000CE58A /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5293639B1F618D7A000CE58A /* Icon-App-20x20@2x.png */; };
 		529363A71F618D7A000CE58A /* Icon-App-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5293639C1F618D7A000CE58A /* Icon-App-20x20@3x.png */; };
@@ -64,6 +66,8 @@
 		523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTestVC.swift; sourceTree = "<group>"; };
 		5271F0F01F386AD1005003AB /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
 		5271F1311F40EED9005003AB /* semesterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = semesterTableViewController.swift; sourceTree = "<group>"; };
+		527A30441FA930E200AD5116 /* testTableVCTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTableVCTableViewController.swift; sourceTree = "<group>"; };
+		527A30461FA9F5AC00AD5116 /* itemsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemsVC.swift; sourceTree = "<group>"; };
 		5293639A1F618D7A000CE58A /* Icon-App-20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@1x.png"; sourceTree = "<group>"; };
 		5293639B1F618D7A000CE58A /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
 		5293639C1F618D7A000CE58A /* Icon-App-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@3x.png"; sourceTree = "<group>"; };
@@ -156,11 +160,13 @@
 				52E9BFAA1F27BB4100667A28 /* ViewController.swift */,
 				52E9BFD91F27CAE400667A28 /* aboutMe.swift */,
 				5271F1311F40EED9005003AB /* semesterTableViewController.swift */,
+				529363B81F65E614000CE58A /* addSemViewController.swift */,
 				529363BA1F6647BB000CE58A /* CourseTableViewController.swift */,
 				529363BC1F6647FD000CE58A /* AddCourseViewController.swift */,
-				529363B81F65E614000CE58A /* addSemViewController.swift */,
+				527A30461FA9F5AC00AD5116 /* itemsVC.swift */,
 				52E9BFAC1F27BB4100667A28 /* Main.storyboard */,
 				523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */,
+				527A30441FA930E200AD5116 /* testTableVCTableViewController.swift */,
 				52E9BFB21F27BB4100667A28 /* Assets.xcassets */,
 				52E9BFB41F27BB4100667A28 /* LaunchScreen.storyboard */,
 				52E9BFB71F27BB4100667A28 /* Info.plist */,
@@ -525,6 +531,8 @@
 				52E9BFDA1F27CAE400667A28 /* aboutMe.swift in Sources */,
 				52E9BFB11F27BB4100667A28 /* Mark_Calculator.xcdatamodeld in Sources */,
 				5271F1321F40EED9005003AB /* semesterTableViewController.swift in Sources */,
+				527A30451FA930E200AD5116 /* testTableVCTableViewController.swift in Sources */,
+				527A30471FA9F5AC00AD5116 /* itemsVC.swift in Sources */,
 				529363B91F65E614000CE58A /* addSemViewController.swift in Sources */,
 				52E9BFA91F27BB4100667A28 /* AppDelegate.swift in Sources */,
 			);
