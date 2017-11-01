@@ -9,7 +9,6 @@ import UIKit
 
 class ItemTestVC: UIViewController {
     
-    @IBOutlet var scrollTest: UIScrollView!
     var cCount = 0
     var wCount = 0
     var mCount = 0
@@ -28,7 +27,6 @@ class ItemTestVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        scrollTest.contentSize.height = CGFloat(testCount)
         
     }
 
@@ -72,7 +70,6 @@ class ItemTestVC: UIViewController {
         markText1.isOpaque = true
         markArray.append(markText1);
         self.view.addSubview(markText1)
-//        self.scrollTest.addSubview(markText1)
         
         cCount = cCount + 45
         wCount = wCount + 45
@@ -107,9 +104,5 @@ class ItemTestVC: UIViewController {
             mCount = mCount - 45
         }
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//    }
-    
+
 }

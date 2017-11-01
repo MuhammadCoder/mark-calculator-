@@ -163,7 +163,13 @@
                             <outlet property="delegate" destination="ont-km-dO6" id="DTh-Or-m0H"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Semester " id="qHb-Hc-JVQ"/>
+                    <navigationItem key="navigationItem" title="My Semester " id="qHb-Hc-JVQ">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="iIz-gF-P5A">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="custom" customClass="DismissSegue" customModule="IBAnimatable" id="MXf-ec-70d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="od6-fi-V7l" kind="show" identifier="addCourse" id="dwU-Ft-rG3"/>
                     </connections>
@@ -212,7 +218,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="NmO-M9-0gu" kind="show" identifier="addItem" id="ZV8-zD-f8a"/>
+                        <segue destination="2od-X3-kQZ" kind="show" identifier="addItem" id="wEz-Rz-Q25"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTO-S5-mgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -264,9 +270,6 @@
                                 <rect key="frame" x="155" y="577" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate"/>
-                                <connections>
-                                    <segue destination="bxz-kO-ReX" kind="show" id="O4Q-O9-mFt"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zc0-M3-wbC">
                                 <rect key="frame" x="55" y="112" width="34" height="21"/>
@@ -303,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4j-Qh-EWt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2437.5999999999999" y="-501.49925037481262"/>
+            <point key="canvasLocation" x="3196" y="-1405"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nnY-xW-Adt">
@@ -398,9 +401,6 @@
                                 <rect key="frame" x="157" y="591" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="2od-X3-kQZ" kind="show" id="WGF-OF-oeC"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -419,7 +419,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fs8-JV-i87">
-                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="72" width="375" height="67"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Add"/>
                             <connections>
@@ -441,10 +441,12 @@
                             <outlet property="delegate" destination="2od-X3-kQZ" id="ySD-Na-yiU"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scp-LH-FuG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3978" y="-501"/>
+            <point key="canvasLocation" x="2450.4000000000001" y="-501.49925037481262"/>
         </scene>
         <!--Add Course View Controller-->
         <scene sceneID="9v3-iU-Qjx">
