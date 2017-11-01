@@ -465,9 +465,17 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVD-E8-iok">
                                 <rect key="frame" x="18" y="558" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add"/>
+                                <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="addBtn:" destination="efd-fI-mPj" eventType="touchUpInside" id="rZX-uQ-heq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsU-1B-Qrj">
+                                <rect key="frame" x="318" y="558" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="deleteBtn:" destination="efd-fI-mPj" eventType="touchUpInside" id="nFq-Hi-Gbf"/>
                                 </connections>
                             </button>
                         </subviews>

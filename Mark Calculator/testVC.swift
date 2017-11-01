@@ -11,35 +11,43 @@ import UIKit
 class testVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var textFieldArray : [UITextField] = []
-    
     var courseItem = UITextField.init(frame: CGRect.init(x:9, y:15, width: 95, height: 30))
+    var worthText = UITextField.init(frame: CGRect.init(x:140, y:15, width: 95, height: 30))
+    var markText = UITextField.init(frame: CGRect.init(x:250, y:15, width: 95, height: 30))
     
     @IBOutlet var tableView: UITableView!
-//    var testItem : [String] = ["hey", "yo", "yye"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
         
     }
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
-//    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return textFieldArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//        cell.textLabel?.text = testItem[indexPath.row]
+        
+//        adding textfields created to the cell
         cell.addSubview(courseItem)
+        cell.addSubview(worthText)
+        cell.addSubview(markText)
+        
         return cell
     }
     
     @IBAction func addBtn(_ sender: Any) {
+        
+//        creating new textfields
+//        textfield for item
         courseItem = UITextField.init(frame: CGRect.init(x:Int(9), y:15, width: 95, height: 30))
         courseItem.borderStyle = UITextBorderStyle.roundedRect;
         courseItem.placeholder = "enter"
@@ -49,9 +57,44 @@ class testVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         courseItem.delegate = self as? UITextFieldDelegate
         courseItem.isOpaque = true
         textFieldArray.append(courseItem)
+//        textfield for worth
+        worthText = UITextField.init(frame: CGRect.init(x:Int(140), y:15, width: 95 , height: 28))
+        worthText.borderStyle = UITextBorderStyle.roundedRect
+        worthText.placeholder = "worth"
+        worthText.autocorrectionType = UITextAutocorrectionType.no
+        worthText.keyboardType = UIKeyboardType.default
+        worthText.contentVerticalAlignment = UIControlContentVerticalAlignment.center
+        worthText.delegate = self as? UITextFieldDelegate
+        worthText.isOpaque = true
+//        textfield for mark
+        markText = UITextField.init(frame: CGRect.init(x:250, y:15, width: 95, height: 28))
+        markText.borderStyle = UITextBorderStyle.roundedRect
+        markText.placeholder = "mark"
+        markText.autocorrectionType = UITextAutocorrectionType.no
+        markText.keyboardType = UIKeyboardType.default
+        markText.contentVerticalAlignment = UIControlContentVerticalAlignment.center
+        markText.delegate = self as? UITextFieldDelegate
+        markText.isOpaque = true
+
         tableView.reloadData()
     }
     
+    @IBAction func deleteBtn(_ sender: Any) {
+    
+        if textFieldArray.last != nil
+        {
+            let fieldToRemove = textFieldArray.removeLast()
+            fieldToRemove.removeFromSuperview()
+             tableView.reloadData()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            textFieldArray.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+    }
     
     /*
     // MARK: - Navigation
