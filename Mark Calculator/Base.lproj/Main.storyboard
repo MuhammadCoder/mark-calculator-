@@ -107,7 +107,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="efd-fI-mPj" kind="show" id="tKF-xN-56O"/>
+                                    <segue destination="ZEn-8l-ubI" kind="show" id="3Sr-Iv-I0V"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -164,7 +164,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Semester " id="qHb-Hc-JVQ">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="iIz-gF-P5A">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="iIz-gF-P5A">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="custom" customClass="DismissSegue" customModule="IBAnimatable" id="MXf-ec-70d"/>
                             </connections>
@@ -218,7 +218,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="2od-X3-kQZ" kind="show" identifier="addItem" id="u8c-zs-Umz"/>
+                        <segue destination="efd-fI-mPj" kind="show" identifier="addItem" id="mOP-Pd-N6D"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTO-S5-mgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -408,12 +408,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Yx-0a-7xu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4038" y="-1406"/>
+            <point key="canvasLocation" x="3273" y="-501"/>
         </scene>
-        <!--TestVC-->
+        <!--ItemsVC-->
         <scene sceneID="FjY-Yp-qrk">
             <objects>
-                <viewController id="efd-fI-mPj" customClass="testVC" customModule="Mark_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="efd-fI-mPj" customClass="itemsVC" customModule="Mark_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Chr-vX-nmI"/>
                         <viewControllerLayoutGuide type="bottom" id="Gyw-hS-JJ0"/>
@@ -442,21 +442,21 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qf-yK-jT8">
-                                <rect key="frame" x="16" y="47" width="34" height="21"/>
+                                <rect key="frame" x="16" y="71" width="34" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Worth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sar-Ys-RPl">
-                                <rect key="frame" x="166" y="47" width="47" height="21"/>
+                                <rect key="frame" x="164" y="71" width="47" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCE-i7-L7Q">
-                                <rect key="frame" x="317" y="47" width="39" height="21"/>
+                                <rect key="frame" x="314" y="71" width="39" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -465,6 +465,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVD-E8-iok">
                                 <rect key="frame" x="18" y="558" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="addBtn:" destination="efd-fI-mPj" eventType="touchUpInside" id="rZX-uQ-heq"/>
@@ -473,9 +474,18 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsU-1B-Qrj">
                                 <rect key="frame" x="318" y="558" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="-"/>
                                 <connections>
                                     <action selector="deleteBtn:" destination="efd-fI-mPj" eventType="touchUpInside" id="nFq-Hi-Gbf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDB-UT-88L">
+                                <rect key="frame" x="170" y="558" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Mark"/>
+                                <connections>
+                                    <segue destination="bxz-kO-ReX" kind="show" id="EM3-XU-eZA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -487,7 +497,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWm-IJ-q2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1516" y="-475"/>
+            <point key="canvasLocation" x="2485.5999999999999" y="-501.49925037481262"/>
         </scene>
         <!--Test TableVC Table View Controller-->
         <scene sceneID="hf1-CZ-CZM">
@@ -525,7 +535,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scp-LH-FuG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2450.4000000000001" y="-501.49925037481262"/>
+            <point key="canvasLocation" x="2439" y="-1394"/>
         </scene>
         <!--Add Course View Controller-->
         <scene sceneID="9v3-iU-Qjx">
@@ -621,7 +631,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EVA-NM-cOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="921" y="366"/>
+            <point key="canvasLocation" x="967" y="366"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="csm-qo-lSC">

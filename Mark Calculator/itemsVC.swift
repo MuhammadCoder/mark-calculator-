@@ -8,7 +8,7 @@
 
 import UIKit
 
-class testVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class itemsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var textFieldArray : [UITextField] = []
     var courseItem = UITextField.init(frame: CGRect.init(x:9, y:15, width: 95, height: 30))

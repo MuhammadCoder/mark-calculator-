@@ -8,9 +8,6 @@
 
 import UIKit
 import DynamicColor
-import SwiftIcons
-
-
 
 class aboutMe: UIViewController {
 
@@ -24,20 +21,11 @@ class aboutMe: UIViewController {
         
         self.view.backgroundColor = DynamicColor(hex: 0xfafafa);
         developedBy.textColor = DynamicColor(hex: 0x3498db);
-//        toolBar1.backgroundColor = DynamicColor(hex: 0x0d7cff);
-        backItem.setIcon(icon: .fontAwesome(.angleLeft), iconSize: 30);
+        // developedBy.fontColor = [UIColor.white];
         
-        //        developedBy.fontColor = [UIColor.white];
-        
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
+  
     /*
     // MARK: - Navigation
 

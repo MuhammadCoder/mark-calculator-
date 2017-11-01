@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "51DFAE27DE8BF7FE03B1063BD62993B3"
+               BlueprintIdentifier = "7478E0788460D932E4389521DA507651"
                BuildableName = "Pods_Mark_Calculator.framework"
                BlueprintName = "Pods-Mark Calculator"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "51DFAE27DE8BF7FE03B1063BD62993B3"
+            BlueprintIdentifier = "7478E0788460D932E4389521DA507651"
             BuildableName = "Pods_Mark_Calculator.framework"
             BlueprintName = "Pods-Mark Calculator"
             ReferencedContainer = "container:Pods.xcodeproj">
