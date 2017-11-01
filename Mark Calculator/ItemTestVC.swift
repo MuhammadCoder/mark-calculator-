@@ -9,16 +9,18 @@ import UIKit
 
 class ItemTestVC: UIViewController {
     
+    @IBOutlet var scrollTest: UIScrollView!
     var cCount = 0
     var wCount = 0
     var mCount = 0
     var testCount = 0
     var i : (Int) = 0
-    var arrayLength : (Int) = 0;
+    var arrayLength : (Int) = 0
     var courseArray : [UITextField] = []
     var worthArray : [UITextField] = []
     var markArray : [UITextField] = []
     var k : (Int) = 0
+    var height : (Int) = 0
     
     var courseItemText1 = UITextField.init(frame: CGRect.init(x:9.5, y:195, width: 95, height: 30))
     var worthText1 = UITextField.init(frame: CGRect.init(x:140, y:195, width: 95, height: 30))
@@ -26,8 +28,8 @@ class ItemTestVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//        scrollTest.contentSize.height = CGFloat(testCount)
+        
     }
 
     @IBAction func addBtn(_ sender: Any) {
@@ -40,14 +42,16 @@ class ItemTestVC: UIViewController {
         courseItemText1.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         courseItemText1.delegate = self as? UITextFieldDelegate
         courseItemText1.isOpaque = true
-        courseItemText1.placeholder = "hey"
+        courseItemText1.placeholder = "course item"
         courseArray.append(courseItemText1)
         self.view.addSubview(courseItemText1)
+//        self.scrollTest.addSubview(courseItemText1)
+        
         //          creating the worth textfield
         
         worthText1 = UITextField.init(frame: CGRect.init(x:140, y:195 + wCount, width: 95 , height: 30))
         worthText1.borderStyle = UITextBorderStyle.roundedRect
-        worthText1.placeholder = "enter"
+        worthText1.placeholder = "worth"
         worthText1.autocorrectionType = UITextAutocorrectionType.no
         worthText1.keyboardType = UIKeyboardType.default
         worthText1.contentVerticalAlignment = UIControlContentVerticalAlignment.center
@@ -55,11 +59,12 @@ class ItemTestVC: UIViewController {
         worthText1.isOpaque = true
         worthArray.append(worthText1)
         self.view.addSubview(worthText1)
+//        self.scrollTest.addSubview(worthText1)
         
         //           creating the mark % textfield
         markText1 = UITextField.init(frame: CGRect.init(x:270, y:195 + mCount, width: 95, height: 30))
         markText1.borderStyle = UITextBorderStyle.roundedRect
-        markText1.placeholder = "enter"
+        markText1.placeholder = "mark"
         markText1.autocorrectionType = UITextAutocorrectionType.no
         markText1.keyboardType = UIKeyboardType.default
         markText1.contentVerticalAlignment = UIControlContentVerticalAlignment.center
@@ -67,30 +72,34 @@ class ItemTestVC: UIViewController {
         markText1.isOpaque = true
         markArray.append(markText1);
         self.view.addSubview(markText1)
+//        self.scrollTest.addSubview(markText1)
         
         cCount = cCount + 45
         wCount = wCount + 45
         mCount = mCount + 45
         testCount = testCount + 1
         arrayLength = courseArray.count
+        
     }
     
 //    deleting the textfield
     @IBAction func deleteBtn(_ sender: Any) {
+        
+//        deleting course item
         if courseArray.last != nil
         {
             let fieldToRemove = courseArray.removeLast()
             fieldToRemove.removeFromSuperview()
             cCount = cCount - 45
         }
-        
+//        deleting worth item
         if worthArray.last != nil
         {
             let fieldToRemove = worthArray.removeLast()
             fieldToRemove.removeFromSuperview()
             wCount = wCount - 45
         }
-        
+//        deleting mark item
         if markArray.last != nil
         {
             let fieldToRemove = markArray.removeLast()
@@ -99,11 +108,8 @@ class ItemTestVC: UIViewController {
         }
     }
     
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//    }
+    
 }

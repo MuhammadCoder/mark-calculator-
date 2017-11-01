@@ -22,7 +22,6 @@ class semesterTableViewController: UITableViewController {
         tableView.dataSource = self
         
          self.clearsSelectionOnViewWillAppear = false
-
          self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
@@ -32,13 +31,13 @@ class semesterTableViewController: UITableViewController {
         tableView.reloadData()
     }
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-                return semesters.count
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return semesters.count
     }
 
     
@@ -73,7 +72,6 @@ class semesterTableViewController: UITableViewController {
         }
     }
     
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -126,11 +124,7 @@ class semesterTableViewController: UITableViewController {
         return true
     }
     */
-
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//    preparing the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addCourse" {
             let destination = segue.destination as! CourseTableViewController
@@ -139,5 +133,4 @@ class semesterTableViewController: UITableViewController {
         
     }
  
-
 }

@@ -63,16 +63,7 @@ class CourseTableViewController: UITableViewController {
             print ("error")
         }
     }
- 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
 
-    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -116,11 +107,7 @@ class CourseTableViewController: UITableViewController {
         return true
     }
     */
-
     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "courseAdd" {
