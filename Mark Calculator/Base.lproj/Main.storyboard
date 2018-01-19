@@ -27,49 +27,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vka-yx-zej">
-                                <rect key="frame" x="16" y="28" width="34" height="21"/>
+                                <rect key="frame" x="35" y="72" width="34" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Worth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfU-Z5-h2R">
-                                <rect key="frame" x="166" y="28" width="47" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF6-3V-Tyk">
-                                <rect key="frame" x="302" y="28" width="39" height="21"/>
+                                <rect key="frame" x="166" y="72" width="47" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NT9-Yn-o2x">
-                                <rect key="frame" x="16" y="64" width="76" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Worth %" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ux1-A8-c6w">
-                                <rect key="frame" x="150" y="64" width="74" height="30"/>
+                                <rect key="frame" x="17" y="104" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mark %" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bWW-Uk-gky">
-                                <rect key="frame" x="284" y="64" width="75" height="30"/>
+                                <rect key="frame" x="284" y="104" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDa-Qp-lzB">
-                                <rect key="frame" x="16" y="121" width="52" height="30"/>
+                                <rect key="frame" x="17" y="142" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
@@ -91,14 +77,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Average :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgc-mM-3Oe">
-                                <rect key="frame" x="4" y="556" width="134" height="21"/>
+                                <rect key="frame" x="16" y="578" width="134" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tjD-9y-gf6">
-                                <rect key="frame" x="2" y="159" width="375" height="378"/>
+                                <rect key="frame" x="0.0" y="192" width="375" height="378"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -145,11 +131,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Mark"/>
                                 <connections>
-                                    <segue destination="bxz-kO-ReX" kind="show" id="TFa-Rf-8qV"/>
+                                    <action selector="markBtn:" destination="U3X-7G-9MU" eventType="touchUpInside" id="zWq-Rs-vAA"/>
+                                    <segue destination="bxz-kO-ReX" kind="show" identifier="getMark" id="TFa-Rf-8qV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8t-MD-ZD9">
-                                <rect key="frame" x="303" y="121" width="30" height="30"/>
+                                <rect key="frame" x="311" y="142" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="-"/>
                                 <connections>
@@ -157,23 +144,29 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight Achieved: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKv-UM-Nwg">
-                                <rect key="frame" x="0.0" y="585" width="138" height="21"/>
+                                <rect key="frame" x="16" y="607" width="138" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8u0-4d-OkY">
-                                <rect key="frame" x="46" y="629" width="46" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Worth %" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ux1-A8-c6w">
+                                <rect key="frame" x="150" y="104" width="74" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="od6-fi-V7l" kind="custom" customClass="DismissSegue" customModule="IBAnimatable" id="kJD-d0-iUE"/>
-                                </connections>
-                            </button>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF6-3V-Tyk">
+                                <rect key="frame" x="307" y="71" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="QLE-hK-iJv"/>
                     <connections>
                         <outlet property="itemTxt" destination="NT9-Yn-o2x" id="LPA-WS-rLe"/>
                         <outlet property="markText" destination="bWW-Uk-gky" id="Lyl-3D-gKw"/>
@@ -349,7 +342,7 @@
             </objects>
             <point key="canvasLocation" x="921" y="-501"/>
         </scene>
-        <!--Course-->
+        <!--Course Table View Controller-->
         <scene sceneID="lXr-Ka-vX1">
             <objects>
                 <tableViewController storyboardIdentifier="CourseTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="od6-fi-V7l" customClass="CourseTableViewController" customModule="Mark_Calculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -381,7 +374,7 @@
                             <outlet property="delegate" destination="od6-fi-V7l" id="VFa-e0-lcL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Course" id="qvI-qf-Uch">
+                    <navigationItem key="navigationItem" id="qvI-qf-Uch">
                         <barButtonItem key="rightBarButtonItem" title="+" id="Xdk-Gv-rVR">
                             <connections>
                                 <segue destination="V2H-LT-35x" kind="show" identifier="courseAdd" id="0k5-t8-dEc"/>
@@ -389,7 +382,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="U3X-7G-9MU" kind="showDetail" identifier="addItem" id="KP0-bo-Kv4"/>
+                        <segue destination="U3X-7G-9MU" kind="show" identifier="addItem" id="KP0-bo-Kv4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTO-S5-mgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -479,10 +472,10 @@
             </objects>
             <point key="canvasLocation" x="3196" y="-1405"/>
         </scene>
-        <!--View Controller-->
+        <!--MarkVC-->
         <scene sceneID="nnY-xW-Adt">
             <objects>
-                <viewController id="bxz-kO-ReX" sceneMemberID="viewController">
+                <viewController id="bxz-kO-ReX" customClass="MarkVC" customModule="Mark_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="13f-m2-Fw7"/>
                         <viewControllerLayoutGuide type="bottom" id="nYo-jI-rIx"/>
@@ -576,6 +569,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="testLabel" destination="7lo-Xv-Dgu" id="lc3-Rb-d5a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Yx-0a-7xu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -910,8 +906,4 @@
             <point key="canvasLocation" x="-695" y="325"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="KP0-bo-Kv4"/>
-        <segue reference="kJD-d0-iUE"/>
-    </inferredMetricsTieBreakers>
 </document>

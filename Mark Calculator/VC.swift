@@ -18,26 +18,24 @@ class yourClass1: UITableViewCell {
     @IBOutlet var markUILabel: UILabel!
 }
 
-class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource{
+class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate{
     
 //    setting up core data
     var course: Course!
     var courseItems : [Item] = []
 
     @IBOutlet var tableView: UITableView!
-
     @IBOutlet var itemTxt: UITextField!
     @IBOutlet var worthTxt: UITextField!
     @IBOutlet var markText: UITextField!
    
   
-    var courseItem = UILabel.init(frame: CGRect.init(x:9, y:15, width: 50, height: 30))
-    var worthItem = UILabel.init(frame: CGRect.init(x:9, y:15, width: 50, height: 30))
-    var markItem = UILabel.init(frame: CGRect.init(x:9, y:15, width: 50, height: 30))
+//    var courseItem = UILabel.init(frame: CGRect.init(x:9, y:15, width: 50, height: 30))
+//    var worthItem = UILabel.init(frame: CGRect.init(x:9, y:15, width: 50, height: 30))
+//    var markItem = UILabel.init(frame: CGRect.init(x:9, y:15, width: 50, height: 30))
     
-  
     var textFieldArray : [UILabel] = []
-    
+    var arryNum : [Item] = []
     var test : [String] = []
     var value : [String] = [];
     var markNum : [Int] = [];
@@ -47,11 +45,17 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource{
       
         tableView.delegate = self
         tableView.dataSource = self
+        self.worthTxt.delegate = self
 
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-         view.addGestureRecognizer(tap)
-        
-        // Do any additional setup after loading the view.
+        view.addGestureRecognizer(tap)
+        self.title = course.name
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let allowed = CharacterSet.decimalDigits
+        let characters = CharacterSet(charactersIn: string)
+        return allowed.isSuperset(of: characters)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -94,12 +98,28 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource{
         
         let context = (UIApplication.shared.delegate as!AppDelegate).persistentContainer.viewContext
         let item1 = Item(context: context)
-        item1.courseItem = itemTxt.text
-        item1.worthItem = worthTxt.text
-        item1.markItem = markText.text
-   
-        course.addToIt(item1)
+       
+        if ((itemTxt.text == "") || (worthTxt.text == "") || (markText.text == "")){
+            let alert = UIAlertController(title:"Alert", message: "Error", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else {
+          
+            item1.courseItem = itemTxt.text
+            item1.worthItem = worthTxt.text
+            item1.markItem = markText.text
+//            let guess: Int? = Int(worthTxt.text!)
+//            print("this is guess", guess)
+            
+            course.addToIt(item1)
+            arryNum.append(item1)
+        }
         
+        
+        
+        
+     
 //        item1.courseItem = UILabel.init(frame: CGRect.init(x:9, y:15, width: 60, height: 30))
         
 //        item1.courseItem /
@@ -120,14 +140,14 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource{
 //        worthItem.text = worthTxt.text
 //        markItem.text = markText.text
         
-         tableView.reloadData()
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
-//        tableView.reloadData()
+        tableView.reloadData()
         
     }
+
     
-    //    fetching core data
+    // fetching from core data
     func getItem () {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         do {
@@ -137,8 +157,7 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource{
 //            courseItems = try context.fetch(Item.fetchRequest()) as! [Item]
             courseItems = try context.fetch(fetchrequest)
             print(courseItems)
-        
-
+    
         } catch {
             print ("opps error while getting the items")
         }
@@ -166,6 +185,7 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource{
             {
                 for _ in result{
                     context.delete(itemSelect)
+                    tableView.reloadData()
                 }
             }
             
@@ -174,52 +194,29 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource{
             } catch {
                 print("opps")
             }
-            
-            tableView.reloadData()
         }
     }
     
     @IBAction func deleteBtn(_ sender: Any) {
-//         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//        
-//        let fetchrequest:NSFetchRequest<Item> = Item.fetchRequest()
-//        let predict = NSPredicate(format: "%K == %@", "k", course)
-//        fetchrequest.predicate = predict
-//        //            courseItems = try context.fetch(Item.fetchRequest()) as! [Item]
-////        courseItems = try context.fetch(fetchrequest)
-//        
-//        if let result = try? context.fetch(fetchrequest)
-//        {
-//            for object in result{
-//               context.delete(object)
-//            }
-//            
-//        }
-//        
-//        do {
-//            try context.save()
-//        } catch {
-//            print("opps")
-//        }
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+        let fetchrequest:NSFetchRequest<Item> = Item.fetchRequest()
+        let predict = NSPredicate(format: "%K == %@", "k", course)
+        fetchrequest.predicate = predict
         
-//        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//
-////         let itemSelect2 = courseItems[indexPath.row];
-//
-////        managedContext.delete(courseItems)
-//
-//        do {
-//            try managedContext.save()
-//        }catch {
-//            print("Error");
-//        }
-//
-//        do {
-//            courseItems = try managedContext.fetch(Item.fetchRequest()) as! [Item]
-//        } catch {
-//            print("Error")
-//        }
-//
+            if let result = try? context.fetch(fetchrequest)
+            {
+                for object in result{
+                    context.delete(object)
+                }
+            }
+            
+            do {
+                try context.save()
+            } catch {
+                print("opps")
+            }
+              
         tableView.reloadData()
         
 //        if textFieldArray.last != nil
@@ -236,9 +233,17 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource{
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "getMark" {
+            let destintaion = segue.destination as! MarkVC
+//            destintaion.selectedMark = "hey"
+            
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
  
-
+    @IBAction func markBtn(_ sender: Any) {
+       performSegue(withIdentifier: "getMark", sender: self)
+    }
+    
 }

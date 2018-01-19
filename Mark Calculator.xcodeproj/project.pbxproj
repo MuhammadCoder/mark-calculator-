@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		16C8DAF323B597B082B64249 /* Pods_Mark_Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02383AD9C9FEBF52D4F52EE3 /* Pods_Mark_Calculator.framework */; };
+		5237A32A20124366008EC49E /* MarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5237A32920124366008EC49E /* MarkVC.swift */; };
 		523D99E81F8E749E00E7F5A9 /* ItemTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */; };
 		5271F0F11F386AD1005003AB /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5271F0F01F386AD1005003AB /* Icon-App-60x60@3x.png */; };
 		5271F1321F40EED9005003AB /* semesterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271F1311F40EED9005003AB /* semesterTableViewController.swift */; };
@@ -64,6 +65,7 @@
 		46424014C6F22A7EE75ED5BD /* Pods_Mark_CalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mark_CalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47BCBA56817FA4F56F003DE7 /* Pods_Mark_CalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mark_CalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B014D4A0ADDD8C455350EB0 /* Pods-Mark CalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mark CalculatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mark CalculatorTests/Pods-Mark CalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		5237A32920124366008EC49E /* MarkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkVC.swift; sourceTree = "<group>"; };
 		523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTestVC.swift; sourceTree = "<group>"; };
 		5271F0F01F386AD1005003AB /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
 		5271F1311F40EED9005003AB /* semesterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = semesterTableViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				52D6CFDE1FB2483C00772DB8 /* VC.swift */,
 				529363BC1F6647FD000CE58A /* AddCourseViewController.swift */,
 				52E9BFAC1F27BB4100667A28 /* Main.storyboard */,
+				5237A32920124366008EC49E /* MarkVC.swift */,
 				527A30461FA9F5AC00AD5116 /* itemsVC.swift */,
 				523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */,
 				527A30441FA930E200AD5116 /* testTableVCTableViewController.swift */,
@@ -530,6 +533,7 @@
 				529363BB1F6647BB000CE58A /* CourseTableViewController.swift in Sources */,
 				523D99E81F8E749E00E7F5A9 /* ItemTestVC.swift in Sources */,
 				529363BD1F6647FD000CE58A /* AddCourseViewController.swift in Sources */,
+				5237A32A20124366008EC49E /* MarkVC.swift in Sources */,
 				52E9BFAB1F27BB4100667A28 /* ViewController.swift in Sources */,
 				52E9BFDA1F27CAE400667A28 /* aboutMe.swift in Sources */,
 				52E9BFB11F27BB4100667A28 /* Mark_Calculator.xcdatamodeld in Sources */,
