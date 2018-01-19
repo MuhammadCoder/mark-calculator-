@@ -104,8 +104,9 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource{
 //        course.a
 //        course.
 //        item1.k =
-        course.it = item1
+//        course.it = item1
         
+        course.addToIt(item1)
         
 //        course.addToItem(item1)
 //         sem.addToCourse(courseItem)
