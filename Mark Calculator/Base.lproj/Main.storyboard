@@ -163,6 +163,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8u0-4d-OkY">
+                                <rect key="frame" x="46" y="629" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="od6-fi-V7l" kind="custom" customClass="DismissSegue" customModule="IBAnimatable" id="kJD-d0-iUE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -381,7 +389,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="U3X-7G-9MU" kind="show" identifier="addItem" id="KP0-bo-Kv4"/>
+                        <segue destination="U3X-7G-9MU" kind="showDetail" identifier="addItem" id="KP0-bo-Kv4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTO-S5-mgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -902,4 +910,8 @@
             <point key="canvasLocation" x="-695" y="325"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="KP0-bo-Kv4"/>
+        <segue reference="kJD-d0-iUE"/>
+    </inferredMetricsTieBreakers>
 </document>

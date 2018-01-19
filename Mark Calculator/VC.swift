@@ -97,21 +97,8 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource{
         item1.courseItem = itemTxt.text
         item1.worthItem = worthTxt.text
         item1.markItem = markText.text
-        
-//        item1.setValue(course, forKey: "name")
-//        course.setValue(item1, forKey: "courseItem")
-        
-//        course.a
-//        course.
-//        item1.k =
-//        course.it = item1
-        
+   
         course.addToIt(item1)
-        
-//        course.addToItem(item1)
-//         sem.addToCourse(courseItem)
-        
-        
         
 //        item1.courseItem = UILabel.init(frame: CGRect.init(x:9, y:15, width: 60, height: 30))
         
@@ -133,10 +120,10 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource{
 //        worthItem.text = worthTxt.text
 //        markItem.text = markText.text
         
-//        save
+         tableView.reloadData()
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
-        tableView.reloadData()
+//        tableView.reloadData()
         
     }
     
@@ -162,25 +149,30 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource{
         view.endEditing(true)
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let fetchrequest:NSFetchRequest<Item> = Item.fetchRequest()
+        let predict = NSPredicate(format: "%K == %@", "k", course)
+        fetchrequest.predicate = predict
         
         let itemSelect = courseItems[indexPath.row];
         
         if editingStyle == UITableViewCellEditingStyle.delete {
-//            courseItems.remove(at: indexPath.row)
-            managedContext.delete(itemSelect)
             
-            do {
-                try managedContext.save()
-            }catch {
-                print("Error");
+            if let result = try? context.fetch(fetchrequest)
+            {
+                for _ in result{
+                    context.delete(itemSelect)
+                }
             }
             
             do {
-                courseItems = try managedContext.fetch(Item.fetchRequest()) as! [Item]
+                try context.save()
             } catch {
-                print("Error")
+                print("opps")
             }
             
             tableView.reloadData()
@@ -188,24 +180,46 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource{
     }
     
     @IBAction func deleteBtn(_ sender: Any) {
-        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        
+//        let fetchrequest:NSFetchRequest<Item> = Item.fetchRequest()
+//        let predict = NSPredicate(format: "%K == %@", "k", course)
+//        fetchrequest.predicate = predict
+//        //            courseItems = try context.fetch(Item.fetchRequest()) as! [Item]
+////        courseItems = try context.fetch(fetchrequest)
+//        
+//        if let result = try? context.fetch(fetchrequest)
+//        {
+//            for object in result{
+//               context.delete(object)
+//            }
+//            
+//        }
+//        
+//        do {
+//            try context.save()
+//        } catch {
+//            print("opps")
+//        }
         
-//         let itemSelect2 = courseItems[indexPath.row];
-        
-//        managedContext.delete(courseItems)
-        
-        do {
-            try managedContext.save()
-        }catch {
-            print("Error");
-        }
-        
-        do {
-            courseItems = try managedContext.fetch(Item.fetchRequest()) as! [Item]
-        } catch {
-            print("Error")
-        }
-        
+//        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//
+////         let itemSelect2 = courseItems[indexPath.row];
+//
+////        managedContext.delete(courseItems)
+//
+//        do {
+//            try managedContext.save()
+//        }catch {
+//            print("Error");
+//        }
+//
+//        do {
+//            courseItems = try managedContext.fetch(Item.fetchRequest()) as! [Item]
+//        } catch {
+//            print("Error")
+//        }
+//
         tableView.reloadData()
         
 //        if textFieldArray.last != nil
