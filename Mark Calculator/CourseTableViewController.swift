@@ -12,6 +12,7 @@ import CoreData
 class CourseTableViewController: UITableViewController {
     
     var sem:Semester!
+//    var course2: Course!
     var course: [Course] = []
 
     override func viewDidLoad() {
@@ -114,5 +115,13 @@ class CourseTableViewController: UITableViewController {
             let destination = segue.destination as! AddCourseViewController
             destination.sem = sem
         }
+        
+       else if segue.identifier == "addItem" {
+            let destination2 = segue.destination as! VC
+            destination2.course = sender as! Course
+//            destination2.course = course2
+        }
+        
+//        destination.sem = sender as! Semester
     }
 }

@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import CoreData
 
 class itemsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet var test: UILabel!
     var textFieldArray : [UITextField] = []
     var courseItem = UITextField.init(frame: CGRect.init(x:9, y:15, width: 95, height: 30))
     var worthText = UITextField.init(frame: CGRect.init(x:140, y:15, width: 95, height: 30))
     var markText = UITextField.init(frame: CGRect.init(x:250, y:15, width: 95, height: 30))
+//    setting up core data
+    var courText : [Item] = []
     
     @IBOutlet var tableView: UITableView!
     
@@ -23,6 +27,10 @@ class itemsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        getItem()
+        tableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -37,14 +45,33 @@ class itemsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
 //        adding textfields created to the cell
+//        courseItem.text =
+        let testItem = courText[indexPath.row]
+        courseItem.text = testItem.courseItem
         cell.addSubview(courseItem)
         cell.addSubview(worthText)
         cell.addSubview(markText)
-        
+     
+//        test.text = testItem.courseItem
+//        cell.textLabel?.text = testItem.courseItem
         return cell
     }
     
+    func getItem () {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do {
+            courText = try context.fetch(Item.fetchRequest()) as! [Item]
+            
+            print(courText)
+        } catch {
+            print("opp")
+        }
+    }
+    
     @IBAction func addBtn(_ sender: Any) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let box = Item(context: context)
         
 //        creating new textfields
 //        textfield for item
@@ -75,7 +102,12 @@ class itemsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         markText.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         markText.delegate = self as? UITextFieldDelegate
         markText.isOpaque = true
-
+        
+//        saving the course
+        box.courseItem = courseItem.text
+//        print(box.courseItem!)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+//        print(item.courseItem)
         tableView.reloadData()
     }
     

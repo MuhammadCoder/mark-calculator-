@@ -36,6 +36,7 @@ class AddCourseViewController: UIViewController {
             
             sem.addToCourse(courseItem)
             
+            
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             navigationController!.popViewController(animated: true)
         }

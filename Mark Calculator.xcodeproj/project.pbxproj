@@ -27,6 +27,7 @@
 		529363B91F65E614000CE58A /* addSemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529363B81F65E614000CE58A /* addSemViewController.swift */; };
 		529363BB1F6647BB000CE58A /* CourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529363BA1F6647BB000CE58A /* CourseTableViewController.swift */; };
 		529363BD1F6647FD000CE58A /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529363BC1F6647FD000CE58A /* AddCourseViewController.swift */; };
+		52D6CFDF1FB2483C00772DB8 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6CFDE1FB2483C00772DB8 /* VC.swift */; };
 		52E9BFA91F27BB4100667A28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E9BFA81F27BB4100667A28 /* AppDelegate.swift */; };
 		52E9BFAB1F27BB4100667A28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E9BFAA1F27BB4100667A28 /* ViewController.swift */; };
 		52E9BFAE1F27BB4100667A28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E9BFAC1F27BB4100667A28 /* Main.storyboard */; };
@@ -82,6 +83,7 @@
 		529363B81F65E614000CE58A /* addSemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addSemViewController.swift; sourceTree = "<group>"; };
 		529363BA1F6647BB000CE58A /* CourseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewController.swift; sourceTree = "<group>"; };
 		529363BC1F6647FD000CE58A /* AddCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
+		52D6CFDE1FB2483C00772DB8 /* VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
 		52E9BFA51F27BB4100667A28 /* Mark Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mark Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E9BFA81F27BB4100667A28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E9BFAA1F27BB4100667A28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,9 +164,10 @@
 				5271F1311F40EED9005003AB /* semesterTableViewController.swift */,
 				529363B81F65E614000CE58A /* addSemViewController.swift */,
 				529363BA1F6647BB000CE58A /* CourseTableViewController.swift */,
+				52D6CFDE1FB2483C00772DB8 /* VC.swift */,
 				529363BC1F6647FD000CE58A /* AddCourseViewController.swift */,
-				527A30461FA9F5AC00AD5116 /* itemsVC.swift */,
 				52E9BFAC1F27BB4100667A28 /* Main.storyboard */,
+				527A30461FA9F5AC00AD5116 /* itemsVC.swift */,
 				523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */,
 				527A30441FA930E200AD5116 /* testTableVCTableViewController.swift */,
 				52E9BFB21F27BB4100667A28 /* Assets.xcassets */,
@@ -532,6 +535,7 @@
 				52E9BFB11F27BB4100667A28 /* Mark_Calculator.xcdatamodeld in Sources */,
 				5271F1321F40EED9005003AB /* semesterTableViewController.swift in Sources */,
 				527A30451FA930E200AD5116 /* testTableVCTableViewController.swift in Sources */,
+				52D6CFDF1FB2483C00772DB8 /* VC.swift in Sources */,
 				527A30471FA9F5AC00AD5116 /* itemsVC.swift in Sources */,
 				529363B91F65E614000CE58A /* addSemViewController.swift in Sources */,
 				52E9BFA91F27BB4100667A28 /* AppDelegate.swift in Sources */,
