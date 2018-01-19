@@ -149,13 +149,7 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource{
 //            courseItems = try context.fetch(Item.fetchRequest()) as! [Item]
             courseItems = try context.fetch(fetchrequest)
             print(courseItems)
-            
-//            let fetchrequest:NSFetchRequest<Course> = Course.fetchRequest()
-//
-//            let predict = NSPredicate(format: "%K == %@", "sem",sem)
-//            fetchrequest.predicate = predict
-//            course = try context.fetch(fetchrequest)
-//            print(course)
+        
 
         } catch {
             print ("opps error while getting the items")
