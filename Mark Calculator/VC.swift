@@ -29,7 +29,8 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource, UITextF
     @IBOutlet var worthTxt: UITextField!
     @IBOutlet var markText: UITextField!
    
-  
+    @IBOutlet var currentAvg: UILabel!
+    
 //    var courseItem = UILabel.init(frame: CGRect.init(x:9, y:15, width: 50, height: 30))
 //    var worthItem = UILabel.init(frame: CGRect.init(x:9, y:15, width: 50, height: 30))
 //    var markItem = UILabel.init(frame: CGRect.init(x:9, y:15, width: 50, height: 30))
@@ -38,7 +39,8 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource, UITextF
     var arryNum : [Item] = []
     var test : [String] = []
     var value : [String] = [];
-    var markNum : [Int] = [];
+//    var currentMark : [Double];
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,7 +111,14 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource, UITextF
             item1.courseItem = itemTxt.text
             item1.worthItem = worthTxt.text
             item1.markItem = markText.text
-//            let guess: Int? = Int(worthTxt.text!)
+            let worthNum: Int? = Int(worthTxt.text!)
+            let markNum: Int? = Int(markText.text!)
+            
+            let courseMark = markNum! * worthNum!
+            var  currentMark : Double = Double(courseMark) / Double(worthNum!)
+            
+            currentAvg.text = String(describing: currentMark)
+//            currentMark = courseMark / worthNum
 //            print("this is guess", guess)
             
             course.addToIt(item1)
@@ -118,8 +127,6 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource, UITextF
         
         
         
-        
-     
 //        item1.courseItem = UILabel.init(frame: CGRect.init(x:9, y:15, width: 60, height: 30))
         
 //        item1.courseItem /
@@ -143,6 +150,11 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource, UITextF
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
         tableView.reloadData()
+        
+    }
+    
+    func getCourseMark()
+    {
         
     }
 
