@@ -22,8 +22,9 @@ class semesterTableViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-         self.clearsSelectionOnViewWillAppear = false
-         self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.clearsSelectionOnViewWillAppear = false
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+//        self.navigationItem.leftBarButtonItem = s
     }
 
     override func viewWillAppear(_ animated: Bool) {

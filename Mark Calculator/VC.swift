@@ -111,13 +111,13 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource, UITextF
             item1.courseItem = itemTxt.text
             item1.worthItem = worthTxt.text
             item1.markItem = markText.text
-            let worthNum: Int? = Int(worthTxt.text!)
-            let markNum: Int? = Int(markText.text!)
+//            let worthNum: Int? = Int(worthTxt.text!)
+//            let markNum: Int? = Int(markText.text!)
             
-            let courseMark = markNum! * worthNum!
-            var  currentMark : Double = Double(courseMark) / Double(worthNum!)
+//            let courseMark = markNum! * worthNum!
+//            var  currentMark : Double = Double(courseMark) / Double(worthNum!)
             
-            currentAvg.text = String(describing: currentMark)
+//            currentAvg.text = String(describing: currentMark)
 //            currentMark = courseMark / worthNum
 //            print("this is guess", guess)
             

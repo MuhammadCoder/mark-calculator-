@@ -22,7 +22,7 @@ class CourseTableViewController: UITableViewController {
         tableView.dataSource = self
 
          self.clearsSelectionOnViewWillAppear = false
-        self.title = sem.sem
+         self.title = sem.sem
 //         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
