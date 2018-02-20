@@ -47,6 +47,7 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource, UITextF
       
         tableView.delegate = self
         tableView.dataSource = self
+
         self.worthTxt.delegate = self
 
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
@@ -245,11 +246,11 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource, UITextF
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "getMark" {
-            let destintaion = segue.destination as! MarkVC
-//            destintaion.selectedMark = "hey"
-            
-        }
+//        if segue.identifier == "getMark" {
+//            let destintaion = segue.destination as! MarkVC
+////            destintaion.selectedMark = "hey"
+//            
+//        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }

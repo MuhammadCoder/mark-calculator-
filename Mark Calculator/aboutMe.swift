@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import DynamicColor
 
 class aboutMe: UIViewController {
 
@@ -19,8 +18,7 @@ class aboutMe: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = DynamicColor(hex: 0xfafafa);
-        developedBy.textColor = DynamicColor(hex: 0x3498db);
+
         // developedBy.fontColor = [UIColor.white];
         
     }

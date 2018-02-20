@@ -9,22 +9,41 @@
 import Foundation
 import UIKit
 import CoreData
+import HGPlaceholders
 
-class semesterTableViewController: UITableViewController {
+class semesterTableViewController: UITableViewController{
 
 //    setting up the core data
     var semesters : [Semester] = []
+    var placeholderTableView: TableView?
     
+    @IBOutlet var testView: UIView!
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+//        placeholderTableView?.
+//        placeholderTableView = tableView as? TableView
+//        placeholderTableView?.placeholderDelegate = self as! PlaceholderDelegate
+//        placeholderTableView?.showNoResultsPlaceholder()
+//        tableView.showL
+//        tableView.sho
+//        placeholderTableView?.showNoResultsPlaceholder()
+//         placeholderTableView?.showDefault()
+//        placeholderTableView = tableView as? TableView
+        tableView.backgroundView = testView
+//        tableView.backgroundView?.position
+//        tableView.bac
+//        placeholderTableView?.placeholderDelegate = self
+        
+        
         
         self.clearsSelectionOnViewWillAppear = false
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
-//        self.navigationItem.leftBarButtonItem = s
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
+//        self.navigationItem.leftBarButtonItem = self.
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -54,13 +73,14 @@ class semesterTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
         
         let sem1 = semesters[indexPath.row]
         self.performSegue(withIdentifier: "addCourse", sender: sem1)
+//        placeholderTableView?.showNoResultsPlaceholder()
     }
     
-    @IBAction func addSemTestBtn(_ sender: Any) {
-//        performSegue(withIdentifier: "addTest", sender: nil)
+    @IBAction func addSemBtn(_ sender: Any) {
     }
     
 //    fetching core data

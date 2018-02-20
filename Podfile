@@ -5,6 +5,7 @@ target 'Mark Calculator' do
     pod 'IBAnimatable', '~> 4.1'
     pod 'Material', '~> 2.8'
     pod 'RAMAnimatedTabBarController', '~> 3.0'
+    pod 'HGPlaceholders', '~> 0.3'
 
   target 'Mark CalculatorTests' do
     inherit! :search_paths

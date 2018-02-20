@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		16C8DAF323B597B082B64249 /* Pods_Mark_Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02383AD9C9FEBF52D4F52EE3 /* Pods_Mark_Calculator.framework */; };
-		5237A32A20124366008EC49E /* MarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5237A32920124366008EC49E /* MarkVC.swift */; };
+		52025678203BFD6500007032 /* GradeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52025677203BFD6500007032 /* GradeVC.swift */; };
+		5202567A203C0EFA00007032 /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52025679203C0EFA00007032 /* ItemVC.swift */; };
+		52057938203BDAE900D46868 /* icons8-menu-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 52057937203BDAE900D46868 /* icons8-menu-50.png */; };
 		523D99E81F8E749E00E7F5A9 /* ItemTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */; };
 		5271F0F11F386AD1005003AB /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5271F0F01F386AD1005003AB /* Icon-App-60x60@3x.png */; };
 		5271F1321F40EED9005003AB /* semesterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271F1311F40EED9005003AB /* semesterTableViewController.swift */; };
@@ -65,7 +67,9 @@
 		46424014C6F22A7EE75ED5BD /* Pods_Mark_CalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mark_CalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47BCBA56817FA4F56F003DE7 /* Pods_Mark_CalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mark_CalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B014D4A0ADDD8C455350EB0 /* Pods-Mark CalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mark CalculatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mark CalculatorTests/Pods-Mark CalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
-		5237A32920124366008EC49E /* MarkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkVC.swift; sourceTree = "<group>"; };
+		52025677203BFD6500007032 /* GradeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeVC.swift; sourceTree = "<group>"; };
+		52025679203C0EFA00007032 /* ItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
+		52057937203BDAE900D46868 /* icons8-menu-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-menu-50.png"; sourceTree = "<group>"; };
 		523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTestVC.swift; sourceTree = "<group>"; };
 		5271F0F01F386AD1005003AB /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
 		5271F1311F40EED9005003AB /* semesterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = semesterTableViewController.swift; sourceTree = "<group>"; };
@@ -167,9 +171,10 @@
 				529363B81F65E614000CE58A /* addSemViewController.swift */,
 				529363BA1F6647BB000CE58A /* CourseTableViewController.swift */,
 				52D6CFDE1FB2483C00772DB8 /* VC.swift */,
+				52025677203BFD6500007032 /* GradeVC.swift */,
 				529363BC1F6647FD000CE58A /* AddCourseViewController.swift */,
 				52E9BFAC1F27BB4100667A28 /* Main.storyboard */,
-				5237A32920124366008EC49E /* MarkVC.swift */,
+				52025679203C0EFA00007032 /* ItemVC.swift */,
 				527A30461FA9F5AC00AD5116 /* itemsVC.swift */,
 				523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */,
 				527A30441FA930E200AD5116 /* testTableVCTableViewController.swift */,
@@ -177,6 +182,7 @@
 				52E9BFB41F27BB4100667A28 /* LaunchScreen.storyboard */,
 				52E9BFB71F27BB4100667A28 /* Info.plist */,
 				52E9BFAF1F27BB4100667A28 /* Mark_Calculator.xcdatamodeld */,
+				52057937203BDAE900D46868 /* icons8-menu-50.png */,
 				5293639A1F618D7A000CE58A /* Icon-App-20x20@1x.png */,
 				5293639B1F618D7A000CE58A /* Icon-App-20x20@2x.png */,
 				5293639C1F618D7A000CE58A /* Icon-App-20x20@3x.png */,
@@ -306,7 +312,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Muhammad ";
 				TargetAttributes = {
 					52E9BFA41F27BB4100667A28 = {
@@ -366,6 +372,7 @@
 				52E9BFAE1F27BB4100667A28 /* Main.storyboard in Resources */,
 				529363B21F6194BD000CE58A /* Icon-App-40x40@2x.png in Resources */,
 				529363A51F618D7A000CE58A /* Icon-App-20x20@1x.png in Resources */,
+				52057938203BDAE900D46868 /* icons8-menu-50.png in Resources */,
 				5271F0F11F386AD1005003AB /* Icon-App-60x60@3x.png in Resources */,
 				529363A91F618D7A000CE58A /* Icon-App-29x29@2x.png in Resources */,
 			);
@@ -476,12 +483,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Mark Calculator/Pods-Mark Calculator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HGPlaceholders/HGPlaceholders.framework",
 				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HGPlaceholders.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
@@ -546,11 +555,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52025678203BFD6500007032 /* GradeVC.swift in Sources */,
 				529363BB1F6647BB000CE58A /* CourseTableViewController.swift in Sources */,
 				523D99E81F8E749E00E7F5A9 /* ItemTestVC.swift in Sources */,
 				529363BD1F6647FD000CE58A /* AddCourseViewController.swift in Sources */,
-				5237A32A20124366008EC49E /* MarkVC.swift in Sources */,
 				52E9BFAB1F27BB4100667A28 /* ViewController.swift in Sources */,
+				5202567A203C0EFA00007032 /* ItemVC.swift in Sources */,
 				52E9BFDA1F27CAE400667A28 /* aboutMe.swift in Sources */,
 				52E9BFB11F27BB4100667A28 /* Mark_Calculator.xcdatamodeld in Sources */,
 				5271F1321F40EED9005003AB /* semesterTableViewController.swift in Sources */,
@@ -622,7 +632,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -630,7 +642,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -671,7 +687,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -679,7 +697,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

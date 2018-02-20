@@ -12,7 +12,6 @@ class addSemViewController: UIViewController {
 
     @IBOutlet var textLabel: UILabel!
     
-    
     @IBOutlet var addTextField: UITextField!
     
     override func viewDidLoad() {
@@ -24,6 +23,7 @@ class addSemViewController: UIViewController {
     @IBAction func addTest(_ sender: Any) {
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
         if (addTextField.text == "")
         {
             let alert = UIAlertController(title: "Alert", message: "Error", preferredStyle: UIAlertControllerStyle.alert)

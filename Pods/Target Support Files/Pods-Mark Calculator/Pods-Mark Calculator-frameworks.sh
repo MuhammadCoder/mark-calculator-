@@ -134,11 +134,13 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/HGPlaceholders/HGPlaceholders.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Material/Material.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/HGPlaceholders/HGPlaceholders.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Material/Material.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework"
