@@ -180,10 +180,11 @@
             </objects>
             <point key="canvasLocation" x="2493.5999999999999" y="-501.49925037481262"/>
         </scene>
-        <!--Animatable Tab Bar Controller-->
+        <!--Mark Calculator-->
         <scene sceneID="hdW-om-U9H">
             <objects>
-                <tabBarController id="4Mc-eu-zsD" customClass="AnimatableTabBarController" customModule="IBAnimatable" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HXh-og-iHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController title="Mark Calculator" id="4Mc-eu-zsD" customClass="BottomNavigationController" customModule="Material" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uiU-Jd-NKd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -197,9 +198,9 @@
                     <connections>
                         <segue destination="AeR-5F-CDW" kind="relationship" relationship="viewControllers" id="6yG-O3-4xa"/>
                         <segue destination="ZEn-8l-ubI" kind="relationship" relationship="viewControllers" id="cn4-j5-Dpq"/>
+                        <segue destination="sjT-Vf-TgB" kind="relationship" relationship="viewControllers" id="NH8-af-kFJ"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HXh-og-iHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-695" y="-501"/>
         </scene>
@@ -314,34 +315,25 @@
             </objects>
             <point key="canvasLocation" x="-2002" y="-501"/>
         </scene>
-        <!--My Semester -->
+        <!--Semester-->
         <scene sceneID="B56-qb-trb">
             <objects>
                 <tableViewController id="ont-km-dO6" customClass="semesterTableViewController" customModule="Mark_Calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hf7-YF-Uvm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" id="Hf7-YF-Uvm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.38045804794520538" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qZq-JS-ucY">
-                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Add"/>
-                            <connections>
-                                <action selector="addSemTestBtn:" destination="ont-km-dO6" eventType="touchUpInside" id="tqM-wa-N5I"/>
-                                <segue destination="9tw-M7-nnP" kind="show" identifier="addTest" id="ZNK-ab-i5y"/>
-                            </connections>
-                        </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="tgN-eR-0wY" style="IBUITableViewCellStyleDefault" id="fSZ-yq-G1M">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="tgN-eR-0wY" style="IBUITableViewCellStyleDefault" id="fSZ-yq-G1M">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fSZ-yq-G1M" id="g8s-0V-nZ5">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tgN-eR-0wY">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -356,17 +348,14 @@
                             <outlet property="delegate" destination="ont-km-dO6" id="DTh-Or-m0H"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Semester " id="qHb-Hc-JVQ">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="xlV-Ad-HyD"/>
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="iIz-gF-P5A"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Semester" id="qHb-Hc-JVQ"/>
                     <connections>
                         <segue destination="od6-fi-V7l" kind="show" identifier="addCourse" id="dwU-Ft-rG3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXa-Pw-DVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="921" y="-501"/>
+            <point key="canvasLocation" x="920.79999999999995" y="-501.49925037481262"/>
         </scene>
         <!--Course Table View Controller-->
         <scene sceneID="lXr-Ka-vX1">
@@ -826,11 +815,11 @@
             </objects>
             <point key="canvasLocation" x="921" y="366"/>
         </scene>
-        <!--Item-->
+        <!--Planner-->
         <scene sceneID="csm-qo-lSC">
             <objects>
                 <navigationController id="AeR-5F-CDW" customClass="NavigationController" customModule="Material" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="CQA-sb-aJh"/>
+                    <tabBarItem key="tabBarItem" title="Planner" id="CQA-sb-aJh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1wo-6r-fxW">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -843,7 +832,7 @@
             </objects>
             <point key="canvasLocation" x="140" y="-501"/>
         </scene>
-        <!--Item-->
+        <!--About Me-->
         <scene sceneID="guh-vE-1fH">
             <objects>
                 <viewController storyboardIdentifier="about" id="ZEn-8l-ubI" customClass="aboutMe" customModule="Mark_Calculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -915,7 +904,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="XRj-Uf-Vnm"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="XRj-Uf-Vnm"/>
                     <connections>
                         <outlet property="developedBy" destination="fei-ua-X5M" id="cT4-YF-XgB"/>
                         <outlet property="toolBar1" destination="Pse-Na-279" id="Y9s-9N-aRu"/>
@@ -923,7 +912,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vod-oj-tUR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-695" y="325"/>
+            <point key="canvasLocation" x="-1146" y="268"/>
+        </scene>
+        <!--Quick Mark-->
+        <scene sceneID="fpQ-d1-IWi">
+            <objects>
+                <viewController id="sjT-Vf-TgB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vjM-Ua-YZQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="C2g-Cl-7lZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SEc-bI-AuD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Quick Mark" id="U2V-Sy-9Zq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePm-kS-sQs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310" y="268"/>
         </scene>
     </scenes>
 </document>

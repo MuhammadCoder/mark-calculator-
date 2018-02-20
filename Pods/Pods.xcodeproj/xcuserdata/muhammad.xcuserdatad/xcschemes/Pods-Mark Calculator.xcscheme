@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7478E0788460D932E4389521DA507651"
+               BlueprintIdentifier = "274787927E1CD4D040E058E11986B4A8"
                BuildableName = "Pods_Mark_Calculator.framework"
                BlueprintName = "Pods-Mark Calculator"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7478E0788460D932E4389521DA507651"
+            BlueprintIdentifier = "274787927E1CD4D040E058E11986B4A8"
             BuildableName = "Pods_Mark_Calculator.framework"
             BlueprintName = "Pods-Mark Calculator"
             ReferencedContainer = "container:Pods.xcodeproj">

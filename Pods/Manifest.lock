@@ -1,20 +1,20 @@
 PODS:
-  - DynamicColor (3.3)
   - IBAnimatable (4.1.0)
   - Material (2.8.1):
     - Material/Core (= 2.8.1)
   - Material/Core (2.8.1)
+  - RAMAnimatedTabBarController (3.0.4)
 
 DEPENDENCIES:
-  - DynamicColor (~> 3.3)
   - IBAnimatable (~> 4.1)
   - Material (~> 2.8)
+  - RAMAnimatedTabBarController (~> 3.0)
 
 SPEC CHECKSUMS:
-  DynamicColor: 3cdaa1e01c16e93ba744e0630f768373e0fc7a7d
   IBAnimatable: 0fd2c9fd38c4798d71bcc18dbd87d473a7df2577
   Material: cc27757e6c91999ac41b2089769106a9d83364c0
+  RAMAnimatedTabBarController: f4df798eb3f374b80448908d3a18586421efb8f6
 
-PODFILE CHECKSUM: fe6bfb2c057db9ac85d70127addf4df0c0f21879
+PODFILE CHECKSUM: 093c3e9e6459809ab2fda4e1caafd5f2637ba2f8
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.4.0
