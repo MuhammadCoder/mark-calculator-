@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 import CoreData
 import HGPlaceholders
+import UIEmptyState
 
-class semesterTableViewController: UITableViewController{
+class semesterTableViewController: UITableViewController, UIEmptyStateDataSource, UIEmptyStateDelegate{
 
 //    setting up the core data
     var semesters : [Semester] = []
@@ -24,6 +25,9 @@ class semesterTableViewController: UITableViewController{
         
         tableView.delegate = self
         tableView.dataSource = self
+        self.emptyStateDelegate = self
+        self.emptyStateDataSource = self
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
 //        placeholderTableView?.
 //        placeholderTableView = tableView as? TableView
 //        placeholderTableView?.placeholderDelegate = self as! PlaceholderDelegate
@@ -33,23 +37,58 @@ class semesterTableViewController: UITableViewController{
 //        placeholderTableView?.showNoResultsPlaceholder()
 //         placeholderTableView?.showDefault()
 //        placeholderTableView = tableView as? TableView
-        tableView.backgroundView = testView
+//        tableView.backgroundView = testView
 //        tableView.backgroundView?.position
 //        tableView.bac
 //        placeholderTableView?.placeholderDelegate = self
         
-        
+//        var color = [UIColor.blue]
         
         self.clearsSelectionOnViewWillAppear = false
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+//        emptyStateBackgroundColor
+//        self.emptyStateBackgroundColor.set()
+//        emptyStateBackgroundColor.set
+//        emptyStateView
+     
+//        self.emptyStateBackgroundColor = [UIColor.blue]
 //        self.navigationItem.leftBarButtonItem = self.
 
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        emptyStateViewWillShow(view: emptyStateView)
+        self.reloadEmptyState()
+    }
+    
 
+    public var emptyStateView: UIView {
+       
+        get {
+            let r : CGFloat = 30.0
+            let buttonSize = CGSize(width:150, height:30)
+            let emptyStateView = UIEmptyStateView(frame: self.view.frame, title: NSMutableAttributedString(string: "No Semesters"))
+            // Call and assign the data source methods
+            emptyStateView.image = #imageLiteral(resourceName: "icons8-backpack-50.png")
+            emptyStateView.imageSize = emptyStateImageSize
+            emptyStateView.imageViewTintColor = UIColor.blue
+            emptyStateView.buttonSize = buttonSize
+            emptyStateView.detailMessage = NSMutableAttributedString(string: "You can add a semesters by tapping the + button")
+            emptyStateView.spacing = r
+            emptyStateView.centerYOffset = emptyStateViewCenterYOffset
+            emptyStateView.backgroundColor = emptyStateBackgroundColor
+            // Some auto resize constraints
+            emptyStateView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            return emptyStateView
+        }
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
 
         getItem()
         tableView.reloadData()
+//        self.reloadEmptyState()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -81,6 +120,8 @@ class semesterTableViewController: UITableViewController{
     }
     
     @IBAction func addSemBtn(_ sender: Any) {
+//        Placeholder.
+         placeholderTableView?.showLoadingPlaceholder()
     }
     
 //    fetching core data

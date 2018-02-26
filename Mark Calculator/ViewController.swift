@@ -10,12 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var switchBtn: UISwitch!
+//    @IBOutlet var switchBtn: UISwitch!
     @IBOutlet var aboutMeBtn: UIButton!
-    @IBOutlet var quicCalBtn: UIButton!
+
     @IBOutlet var semBtn: UIButton!
     
-    @IBOutlet var titleBorder: UIView!
+//    @IBOutlet var titleBorder: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,6 +11,13 @@
 		52025678203BFD6500007032 /* GradeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52025677203BFD6500007032 /* GradeVC.swift */; };
 		5202567A203C0EFA00007032 /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52025679203C0EFA00007032 /* ItemVC.swift */; };
 		52057938203BDAE900D46868 /* icons8-menu-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 52057937203BDAE900D46868 /* icons8-menu-50.png */; };
+		5233C9C9203CE6A7002B9452 /* icons8-plus-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5233C9C8203CE6A6002B9452 /* icons8-plus-50.png */; };
+		5233C9CB203CE9AD002B9452 /* icons8-backpack-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5233C9CA203CE9AC002B9452 /* icons8-backpack-50.png */; };
+		5233C9CE203CF246002B9452 /* gradeSwtich2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233C9CC203CF246002B9452 /* gradeSwtich2VC.swift */; };
+		5233C9CF203CF246002B9452 /* gradeSwtich2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5233C9CD203CF246002B9452 /* gradeSwtich2VC.xib */; };
+		5233C9D1203CF484002B9452 /* CourseViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233C9D0203CF484002B9452 /* CourseViewVC.swift */; };
+		5233C9DC203CF9B0002B9452 /* ItemTBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233C9DA203CF9B0002B9452 /* ItemTBCell.swift */; };
+		5233C9DD203CF9B0002B9452 /* ItemTBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5233C9DB203CF9B0002B9452 /* ItemTBCell.xib */; };
 		523D99E81F8E749E00E7F5A9 /* ItemTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */; };
 		5271F0F11F386AD1005003AB /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5271F0F01F386AD1005003AB /* Icon-App-60x60@3x.png */; };
 		5271F1321F40EED9005003AB /* semesterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271F1311F40EED9005003AB /* semesterTableViewController.swift */; };
@@ -70,6 +77,13 @@
 		52025677203BFD6500007032 /* GradeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeVC.swift; sourceTree = "<group>"; };
 		52025679203C0EFA00007032 /* ItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
 		52057937203BDAE900D46868 /* icons8-menu-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-menu-50.png"; sourceTree = "<group>"; };
+		5233C9C8203CE6A6002B9452 /* icons8-plus-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-plus-50.png"; sourceTree = "<group>"; };
+		5233C9CA203CE9AC002B9452 /* icons8-backpack-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-backpack-50.png"; sourceTree = "<group>"; };
+		5233C9CC203CF246002B9452 /* gradeSwtich2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradeSwtich2VC.swift; sourceTree = "<group>"; };
+		5233C9CD203CF246002B9452 /* gradeSwtich2VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = gradeSwtich2VC.xib; sourceTree = "<group>"; };
+		5233C9D0203CF484002B9452 /* CourseViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewVC.swift; sourceTree = "<group>"; };
+		5233C9DA203CF9B0002B9452 /* ItemTBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTBCell.swift; sourceTree = "<group>"; };
+		5233C9DB203CF9B0002B9452 /* ItemTBCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTBCell.xib; sourceTree = "<group>"; };
 		523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTestVC.swift; sourceTree = "<group>"; };
 		5271F0F01F386AD1005003AB /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
 		5271F1311F40EED9005003AB /* semesterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = semesterTableViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				52E9BFA81F27BB4100667A28 /* AppDelegate.swift */,
+				5233C9DA203CF9B0002B9452 /* ItemTBCell.swift */,
+				5233C9DB203CF9B0002B9452 /* ItemTBCell.xib */,
 				52E9BFAA1F27BB4100667A28 /* ViewController.swift */,
 				52E9BFD91F27CAE400667A28 /* aboutMe.swift */,
 				5271F1311F40EED9005003AB /* semesterTableViewController.swift */,
@@ -174,6 +190,7 @@
 				52025677203BFD6500007032 /* GradeVC.swift */,
 				529363BC1F6647FD000CE58A /* AddCourseViewController.swift */,
 				52E9BFAC1F27BB4100667A28 /* Main.storyboard */,
+				5233C9D0203CF484002B9452 /* CourseViewVC.swift */,
 				52025679203C0EFA00007032 /* ItemVC.swift */,
 				527A30461FA9F5AC00AD5116 /* itemsVC.swift */,
 				523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */,
@@ -183,6 +200,8 @@
 				52E9BFB71F27BB4100667A28 /* Info.plist */,
 				52E9BFAF1F27BB4100667A28 /* Mark_Calculator.xcdatamodeld */,
 				52057937203BDAE900D46868 /* icons8-menu-50.png */,
+				5233C9C8203CE6A6002B9452 /* icons8-plus-50.png */,
+				5233C9CA203CE9AC002B9452 /* icons8-backpack-50.png */,
 				5293639A1F618D7A000CE58A /* Icon-App-20x20@1x.png */,
 				5293639B1F618D7A000CE58A /* Icon-App-20x20@2x.png */,
 				5293639C1F618D7A000CE58A /* Icon-App-20x20@3x.png */,
@@ -195,6 +214,8 @@
 				529363A31F618D7A000CE58A /* Icon-App-60x60@1x.png */,
 				529363A41F618D7A000CE58A /* Icon-App-60x60@2x.png */,
 				5271F0F01F386AD1005003AB /* Icon-App-60x60@3x.png */,
+				5233C9CC203CF246002B9452 /* gradeSwtich2VC.swift */,
+				5233C9CD203CF246002B9452 /* gradeSwtich2VC.xib */,
 			);
 			path = "Mark Calculator";
 			sourceTree = "<group>";
@@ -363,13 +384,17 @@
 				52E9BFB61F27BB4100667A28 /* LaunchScreen.storyboard in Resources */,
 				52E9BFB31F27BB4100667A28 /* Assets.xcassets in Resources */,
 				529363A71F618D7A000CE58A /* Icon-App-20x20@3x.png in Resources */,
+				5233C9DD203CF9B0002B9452 /* ItemTBCell.xib in Resources */,
 				529363A81F618D7A000CE58A /* Icon-App-29x29@1x.png in Resources */,
 				529363A61F618D7A000CE58A /* Icon-App-20x20@2x.png in Resources */,
 				529363AF1F618D7A000CE58A /* Icon-App-60x60@2x.png in Resources */,
 				529363AB1F618D7A000CE58A /* Icon-App-40x40@1x.png in Resources */,
+				5233C9C9203CE6A7002B9452 /* icons8-plus-50.png in Resources */,
+				5233C9CF203CF246002B9452 /* gradeSwtich2VC.xib in Resources */,
 				529363AA1F618D7A000CE58A /* Icon-App-29x29@3x.png in Resources */,
 				529363AE1F618D7A000CE58A /* Icon-App-60x60@1x.png in Resources */,
 				52E9BFAE1F27BB4100667A28 /* Main.storyboard in Resources */,
+				5233C9CB203CE9AD002B9452 /* icons8-backpack-50.png in Resources */,
 				529363B21F6194BD000CE58A /* Icon-App-40x40@2x.png in Resources */,
 				529363A51F618D7A000CE58A /* Icon-App-20x20@1x.png in Resources */,
 				52057938203BDAE900D46868 /* icons8-menu-50.png in Resources */,
@@ -487,6 +512,7 @@
 				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
+				"${BUILT_PRODUCTS_DIR}/UIEmptyState/UIEmptyState.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -494,6 +520,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIEmptyState.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -557,7 +584,9 @@
 			files = (
 				52025678203BFD6500007032 /* GradeVC.swift in Sources */,
 				529363BB1F6647BB000CE58A /* CourseTableViewController.swift in Sources */,
+				5233C9D1203CF484002B9452 /* CourseViewVC.swift in Sources */,
 				523D99E81F8E749E00E7F5A9 /* ItemTestVC.swift in Sources */,
+				5233C9DC203CF9B0002B9452 /* ItemTBCell.swift in Sources */,
 				529363BD1F6647FD000CE58A /* AddCourseViewController.swift in Sources */,
 				52E9BFAB1F27BB4100667A28 /* ViewController.swift in Sources */,
 				5202567A203C0EFA00007032 /* ItemVC.swift in Sources */,
@@ -567,6 +596,7 @@
 				527A30451FA930E200AD5116 /* testTableVCTableViewController.swift in Sources */,
 				52D6CFDF1FB2483C00772DB8 /* VC.swift in Sources */,
 				527A30471FA9F5AC00AD5116 /* itemsVC.swift in Sources */,
+				5233C9CE203CF246002B9452 /* gradeSwtich2VC.swift in Sources */,
 				529363B91F65E614000CE58A /* addSemViewController.swift in Sources */,
 				52E9BFA91F27BB4100667A28 /* AppDelegate.swift in Sources */,
 			);

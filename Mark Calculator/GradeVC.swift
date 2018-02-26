@@ -10,21 +10,30 @@ import UIKit
 
 class GradeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    @IBOutlet var tableView: UITableView!
-    
     struct Testobj {
         var sectionName : String!
         var sectionObj : [Item] = []
     }
+   
+    @IBOutlet var tableView: UITableView!
+    
     
     var arrayObject = [Testobj]()
     var test : [Item] = []
 
+    var selectedSegment = 1
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        //setting up the table
         tableView.delegate = self
         tableView.dataSource = self
+        
+//        let nib = UINib(nibName: "ItemTBCell", bundle:nil)
+//        tableView.register(nib, forCellReuseIdentifier: "customCell")
+        tableView.backgroundColor = UIColor.darkGray
         
         arrayObject = [
             Testobj(sectionName: "Quizzes", sectionObj:[]),
@@ -52,16 +61,29 @@ class GradeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell =  tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+         let cell2 =  tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath)
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! ItemTBCell
         let item1 = test[indexPath.row]
-        
         cell.textLabel?.text = item1.courseItem
+        cell2.textLabel?.text = "second"
+        
+        if selectedSegment == 1 {
+             return cell
+        }
+        else {
+            
+            return cell2
+        }
+//        cell.textLabel?.text = item1.courseItem
+//        cell.customTest(text: item1.courseItem!)
+//        cell.customTest(text: item1.courseItem!)
 //        let item11 = arrayObject[indexPath.section].sectionObj[indexPath.row]
 //        if (arrayObject[0].sectionName == ) {
 //            print("YEWERWE")
 //        }
 //        cell.textLabel?.text = item11.courseItem
         
-        return cell
+//        return cell
     }
 //    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 ////        tableView
@@ -95,7 +117,19 @@ class GradeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
        
     }
     
-
+  
+    @IBAction func switchSegAction(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            selectedSegment = 1
+        }
+        else {
+            selectedSegment = 2
+        }
+        tableView.reloadData()
+    }
+    
+  
+   
     /*
     // MARK: - Navigation
 
