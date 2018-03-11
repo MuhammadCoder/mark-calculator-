@@ -19,6 +19,8 @@
 		5233C9DC203CF9B0002B9452 /* ItemTBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233C9DA203CF9B0002B9452 /* ItemTBCell.swift */; };
 		5233C9DD203CF9B0002B9452 /* ItemTBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5233C9DB203CF9B0002B9452 /* ItemTBCell.xib */; };
 		523D99E81F8E749E00E7F5A9 /* ItemTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */; };
+		525E7DDC2055EEF900030238 /* courseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E7DDB2055EEF900030238 /* courseVC.swift */; };
+		525E7DDE2055F18F00030238 /* itemListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E7DDD2055F18F00030238 /* itemListVC.swift */; };
 		5271F0F11F386AD1005003AB /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5271F0F01F386AD1005003AB /* Icon-App-60x60@3x.png */; };
 		5271F1321F40EED9005003AB /* semesterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271F1311F40EED9005003AB /* semesterTableViewController.swift */; };
 		527A30451FA930E200AD5116 /* testTableVCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A30441FA930E200AD5116 /* testTableVCTableViewController.swift */; };
@@ -85,6 +87,8 @@
 		5233C9DA203CF9B0002B9452 /* ItemTBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTBCell.swift; sourceTree = "<group>"; };
 		5233C9DB203CF9B0002B9452 /* ItemTBCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTBCell.xib; sourceTree = "<group>"; };
 		523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTestVC.swift; sourceTree = "<group>"; };
+		525E7DDB2055EEF900030238 /* courseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = courseVC.swift; sourceTree = "<group>"; };
+		525E7DDD2055F18F00030238 /* itemListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemListVC.swift; sourceTree = "<group>"; };
 		5271F0F01F386AD1005003AB /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
 		5271F1311F40EED9005003AB /* semesterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = semesterTableViewController.swift; sourceTree = "<group>"; };
 		527A30441FA930E200AD5116 /* testTableVCTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTableVCTableViewController.swift; sourceTree = "<group>"; };
@@ -188,8 +192,10 @@
 				529363BA1F6647BB000CE58A /* CourseTableViewController.swift */,
 				52D6CFDE1FB2483C00772DB8 /* VC.swift */,
 				52025677203BFD6500007032 /* GradeVC.swift */,
+				525E7DDD2055F18F00030238 /* itemListVC.swift */,
 				529363BC1F6647FD000CE58A /* AddCourseViewController.swift */,
 				52E9BFAC1F27BB4100667A28 /* Main.storyboard */,
+				525E7DDB2055EEF900030238 /* courseVC.swift */,
 				5233C9D0203CF484002B9452 /* CourseViewVC.swift */,
 				52025679203C0EFA00007032 /* ItemVC.swift */,
 				527A30461FA9F5AC00AD5116 /* itemsVC.swift */,
@@ -596,7 +602,9 @@
 				527A30451FA930E200AD5116 /* testTableVCTableViewController.swift in Sources */,
 				52D6CFDF1FB2483C00772DB8 /* VC.swift in Sources */,
 				527A30471FA9F5AC00AD5116 /* itemsVC.swift in Sources */,
+				525E7DDE2055F18F00030238 /* itemListVC.swift in Sources */,
 				5233C9CE203CF246002B9452 /* gradeSwtich2VC.swift in Sources */,
+				525E7DDC2055EEF900030238 /* courseVC.swift in Sources */,
 				529363B91F65E614000CE58A /* addSemViewController.swift in Sources */,
 				52E9BFA91F27BB4100667A28 /* AppDelegate.swift in Sources */,
 			);
