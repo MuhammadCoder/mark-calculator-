@@ -154,12 +154,6 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource, UITextF
         
     }
     
-    func getCourseMark()
-    {
-        
-    }
-
-    
     // fetching from core data
     func getItem () {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -167,7 +161,6 @@ class VC: UIViewController,  UITableViewDelegate, UITableViewDataSource, UITextF
             let fetchrequest:NSFetchRequest<Item> = Item.fetchRequest()
             let predict = NSPredicate(format: "%K == %@", "k", course)
             fetchrequest.predicate = predict
-//            courseItems = try context.fetch(Item.fetchRequest()) as! [Item]
             courseItems = try context.fetch(fetchrequest)
             print(courseItems)
     

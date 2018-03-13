@@ -15,7 +15,6 @@
 		5233C9CB203CE9AD002B9452 /* icons8-backpack-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5233C9CA203CE9AC002B9452 /* icons8-backpack-50.png */; };
 		5233C9CE203CF246002B9452 /* gradeSwtich2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233C9CC203CF246002B9452 /* gradeSwtich2VC.swift */; };
 		5233C9CF203CF246002B9452 /* gradeSwtich2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5233C9CD203CF246002B9452 /* gradeSwtich2VC.xib */; };
-		5233C9D1203CF484002B9452 /* CourseViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233C9D0203CF484002B9452 /* CourseViewVC.swift */; };
 		5233C9DC203CF9B0002B9452 /* ItemTBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233C9DA203CF9B0002B9452 /* ItemTBCell.swift */; };
 		5233C9DD203CF9B0002B9452 /* ItemTBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5233C9DB203CF9B0002B9452 /* ItemTBCell.xib */; };
 		523D99E81F8E749E00E7F5A9 /* ItemTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */; };
@@ -83,7 +82,6 @@
 		5233C9CA203CE9AC002B9452 /* icons8-backpack-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-backpack-50.png"; sourceTree = "<group>"; };
 		5233C9CC203CF246002B9452 /* gradeSwtich2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradeSwtich2VC.swift; sourceTree = "<group>"; };
 		5233C9CD203CF246002B9452 /* gradeSwtich2VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = gradeSwtich2VC.xib; sourceTree = "<group>"; };
-		5233C9D0203CF484002B9452 /* CourseViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewVC.swift; sourceTree = "<group>"; };
 		5233C9DA203CF9B0002B9452 /* ItemTBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTBCell.swift; sourceTree = "<group>"; };
 		5233C9DB203CF9B0002B9452 /* ItemTBCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTBCell.xib; sourceTree = "<group>"; };
 		523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTestVC.swift; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 				529363BC1F6647FD000CE58A /* AddCourseViewController.swift */,
 				52E9BFAC1F27BB4100667A28 /* Main.storyboard */,
 				525E7DDB2055EEF900030238 /* courseVC.swift */,
-				5233C9D0203CF484002B9452 /* CourseViewVC.swift */,
 				52025679203C0EFA00007032 /* ItemVC.swift */,
 				527A30461FA9F5AC00AD5116 /* itemsVC.swift */,
 				523D99E71F8E749E00E7F5A9 /* ItemTestVC.swift */,
@@ -590,7 +587,6 @@
 			files = (
 				52025678203BFD6500007032 /* GradeVC.swift in Sources */,
 				529363BB1F6647BB000CE58A /* CourseTableViewController.swift in Sources */,
-				5233C9D1203CF484002B9452 /* CourseViewVC.swift in Sources */,
 				523D99E81F8E749E00E7F5A9 /* ItemTestVC.swift in Sources */,
 				5233C9DC203CF9B0002B9452 /* ItemTBCell.swift in Sources */,
 				529363BD1F6647FD000CE58A /* AddCourseViewController.swift in Sources */,

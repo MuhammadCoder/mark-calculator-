@@ -26,7 +26,6 @@ class GradeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
         //setting up the table
         tableView.delegate = self
         tableView.dataSource = self

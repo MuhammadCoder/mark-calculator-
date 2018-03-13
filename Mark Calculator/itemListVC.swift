@@ -7,29 +7,99 @@
 //
 
 import UIKit
+import CoreData
 
 class itemListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
 
     @IBOutlet var tableview: UITableView!
+
+    var test : [Item] = []
+    var course: Course!
     
-    var arry = ["heyy", "elo"]
     override func viewDidLoad() {
         super.viewDidLoad()
         tableview.dataSource = self
         tableview.delegate = self
+//        tableview.backgroundColor = UIColor.darkGray
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        getItem()
+        tableview.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arry.count
+        return test.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = arry[indexPath.row]
+        let item1 = test[indexPath.row]
+        cell.textLabel?.text = item1.courseItem
         return cell
     }
+    
+    func getItem () {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        do {
+            let fetchrequest:NSFetchRequest<Item> = Item.fetchRequest()
+            let predict = NSPredicate(format: "%K == %@", "k", course)
+            fetchrequest.predicate = predict
+            test = try context.fetch(fetchrequest)
+//            test = try context.fetch(Item.fetchRequest()) as! [Item]
+            
+        } catch {
+            print("error")
+        }
+                
+        
+//        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        do {
+//            let fetchrequest:NSFetchRequest<Item> = Item.fetchRequest()
+//            let predict = NSPredicate(format: "%K == %@", "k", course)
+//            fetchrequest.predicate = predict
+//            //            courseItems = try context.fetch(Item.fetchRequest()) as! [Item]
+//            courseItems = try context.fetch(fetchrequest)
+//            print(courseItems)
+//
+//        } catch {
+//            print ("opps error while getting the items")
+//        }
+//
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let courseItem = test[indexPath.row];
+        if editingStyle == .delete {
+            managedContext.delete(courseItem)
+            
+            do {
+                try managedContext.save()
+            }catch {
+                print("Error");
+            }
+            
+            do {
+                test = try managedContext.fetch(Item.fetchRequest()) as! [Item]
+            } catch {
+                print("Error")
+            }
+            
+            tableView.reloadData();
+            
+            // Delete the row from the data source
+            //            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 

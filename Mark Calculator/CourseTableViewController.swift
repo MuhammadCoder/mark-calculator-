@@ -47,7 +47,7 @@ class CourseTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cour = course[indexPath.row]
-        performSegue(withIdentifier: "addItem", sender: cour)
+        performSegue(withIdentifier: "viewItem", sender: cour)
     }
     
     func getCourse() {
@@ -115,11 +115,15 @@ class CourseTableViewController: UITableViewController {
             let destination = segue.destination as! AddCourseViewController
             destination.sem = sem
         }
-        
-       else if segue.identifier == "addItem" {
-            let destination2 = segue.destination as! VC
-            destination2.course = sender as! Course
-//            destination2.course = course2
+//        
+//       else if segue.identifier == "addItem" {
+//            let destination2 = segue.destination as! VC
+//            destination2.course = sender as! Course
+////            destination2.course = course2
+//        }
+        else if segue.identifier == "viewItem"{
+            let destination3 = segue.destination as! courseVC
+            destination3.course = sender as! Course
         }
         
 //        destination.sem = sender as! Semester

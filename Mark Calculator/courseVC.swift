@@ -10,6 +10,7 @@ import UIKit
 
 class courseVC: UIViewController {
     
+    var course: Course!
     
     @IBOutlet var segmented: UISegmentedControl!
     @IBOutlet var container1: UIView!
@@ -27,6 +28,7 @@ class courseVC: UIViewController {
         case 0:
             container1.isHidden = false
             container2.isHidden = true
+//            performSegue(withIdentifier: "test", sender: self)
         case 1:
             container1.isHidden = true
             container2.isHidden = false
@@ -34,14 +36,19 @@ class courseVC: UIViewController {
             break
         }
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "test1" {
+            let destination = segue.destination as! itemListVC
+            destination.course = course
+        }
     }
-    */
+ 
 
 }
