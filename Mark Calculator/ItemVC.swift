@@ -11,6 +11,7 @@ import UIKit
 class ItemVC: UIViewController {
 
     var courseItem : [Item] = []
+    var course : Course!
     
     @IBOutlet var itemTxt: UITextField!
     
@@ -40,7 +41,10 @@ class ItemVC: UIViewController {
         else {
             
             let itemContent = Item(context: context)
+            course.addToIt(itemContent)
             itemContent.courseItem = itemTxt.text
+//            course.addToIt(itemContent)
+            
             
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             self.navigationController!.popViewController(animated: true)

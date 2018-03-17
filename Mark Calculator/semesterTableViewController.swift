@@ -28,24 +28,11 @@ class semesterTableViewController: UITableViewController, UIEmptyStateDataSource
         self.emptyStateDelegate = self
         self.emptyStateDataSource = self
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
-//        placeholderTableView?.
-//        placeholderTableView = tableView as? TableView
-//        placeholderTableView?.placeholderDelegate = self as! PlaceholderDelegate
-//        placeholderTableView?.showNoResultsPlaceholder()
-//        tableView.showL
-//        tableView.sho
-//        placeholderTableView?.showNoResultsPlaceholder()
-//         placeholderTableView?.showDefault()
-//        placeholderTableView = tableView as? TableView
-//        tableView.backgroundView = testView
-//        tableView.backgroundView?.position
-//        tableView.bac
-//        placeholderTableView?.placeholderDelegate = self
-        
-//        var color = [UIColor.blue]
-        
+
         self.clearsSelectionOnViewWillAppear = false
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        
+//        self.navigationItem.rightBarButtonItem = 
 //        emptyStateBackgroundColor
 //        self.emptyStateBackgroundColor.set()
 //        emptyStateBackgroundColor.set
