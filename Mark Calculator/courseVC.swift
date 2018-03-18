@@ -11,6 +11,7 @@ import CoreData
 
 class courseVC: UIViewController {
     
+//    delcaration
     var course: Course!
     var test : [Item] = []
     
@@ -19,6 +20,8 @@ class courseVC: UIViewController {
     
     @IBOutlet var testScreen: UIView!
     @IBOutlet var container2: UIView!
+    
+//    self.navigationItem.rightBarButtonItem = UIBar
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +37,6 @@ class courseVC: UIViewController {
             container1.isHidden = false
             container2.isHidden = true
         }
-//        if (course)
-//        container1.isHidden = false
-//        container2.isHidden = true
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,15 +55,15 @@ class courseVC: UIViewController {
 
     }
     
-    
-    
+//    function to check if the item core data is empty
     var isEmpty : Bool {
          let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         do{
             let fetchrequest:NSFetchRequest<Item> = Item.fetchRequest()
+            let predict = NSPredicate(format: "%K == %@", "k", course)
+            fetchrequest.predicate = predict
             let count = try context.count(for: fetchrequest)
-//            let count  = try context.count(for: request)
             return count == 0 ? true : false
         }catch{
             return true
@@ -72,6 +71,7 @@ class courseVC: UIViewController {
         
     }
 
+//    segmented control
     @IBAction func Choice(_ sender: Any) {
         switch segmented.selectedSegmentIndex {
         case 0:
@@ -112,7 +112,6 @@ class courseVC: UIViewController {
         }
     }
     
-    // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -128,5 +127,4 @@ class courseVC: UIViewController {
             destination3.course =  course
         }
     }
- 
 }

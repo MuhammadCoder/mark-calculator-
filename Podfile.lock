@@ -1,26 +1,23 @@
 PODS:
-  - HGPlaceholders (0.3.0)
   - IBAnimatable (4.1.0)
   - Material (2.8.1):
     - Material/Core (= 2.8.1)
   - Material/Core (2.8.1)
   - RAMAnimatedTabBarController (3.0.4)
-  - UIEmptyState (3.1.0)
+  - SkyFloatingLabelTextField (3.4.0)
 
 DEPENDENCIES:
-  - HGPlaceholders (~> 0.3)
   - IBAnimatable (~> 4.1)
   - Material (~> 2.8)
   - RAMAnimatedTabBarController (~> 3.0)
-  - UIEmptyState
+  - SkyFloatingLabelTextField (~> 3.0)
 
 SPEC CHECKSUMS:
-  HGPlaceholders: 2df01c51b04a30acd0b8c9c7161c7cdde4541109
   IBAnimatable: 0fd2c9fd38c4798d71bcc18dbd87d473a7df2577
   Material: cc27757e6c91999ac41b2089769106a9d83364c0
   RAMAnimatedTabBarController: f4df798eb3f374b80448908d3a18586421efb8f6
-  UIEmptyState: 9b501dc90933ce2743949ecbf18c20ffb33a2be9
+  SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
 
-PODFILE CHECKSUM: 220251f352b1febeb009b9adc8b12537877c8db2
+PODFILE CHECKSUM: 0cd7ba656c5726b5f715644792d270326b9af2db
 
 COCOAPODS: 1.4.0

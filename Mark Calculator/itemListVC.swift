@@ -21,8 +21,8 @@ class itemListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
         tableview.dataSource = self
         tableview.delegate = self
-//        tableview.backgroundColor = UIColor.darkGray
-        // Do any additional setup after loading the view.
+        
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,6 +55,7 @@ class itemListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             print("error")
         }
                 
+   
         
 //        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 //        do {

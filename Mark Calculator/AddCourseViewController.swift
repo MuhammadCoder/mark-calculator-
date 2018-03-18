@@ -7,6 +7,8 @@
 //
 
 import UIKit
+//import SkyFloatingLabelTextField
+import SkyFloatingLabelTextField;
 
 class AddCourseViewController: UIViewController {
 
@@ -17,7 +19,6 @@ class AddCourseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    
     }
 
     @IBAction func addBtn(_ sender: Any) {

@@ -9,14 +9,13 @@
 import Foundation
 import UIKit
 import CoreData
-import HGPlaceholders
-import UIEmptyState
 
-class semesterTableViewController: UITableViewController, UIEmptyStateDataSource, UIEmptyStateDelegate{
+
+class semesterTableViewController: UITableViewController{
 
 //    setting up the core data
     var semesters : [Semester] = []
-    var placeholderTableView: TableView?
+   
     
     @IBOutlet var testView: UIView!
     override func viewDidLoad() {
@@ -25,57 +24,68 @@ class semesterTableViewController: UITableViewController, UIEmptyStateDataSource
         
         tableView.delegate = self
         tableView.dataSource = self
-        self.emptyStateDelegate = self
-        self.emptyStateDataSource = self
+      
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
 
         self.clearsSelectionOnViewWillAppear = false
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target:self, action: #selector(semesterTableViewController.addSem))
+
+
+    }
+//    function to add Semester
+    func addSem() {
+//        create an alert
+        let alertController = UIAlertController(title: "New Semester", message:"Enter a new semester", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title:"Confirm", style:UIAlertActionStyle.default, handler: ({
+            (handler) in
+            if let field = alertController.textFields![0] as? UITextField {
+                if field.text == "" {
+                    SweetAlert().showAlert("Error", subTitle: "left empty", style: AlertStyle.error)
+                }
+                else {
+                    self.saveSem(semItem: field.text!)
+                    
+                     SweetAlert().showAlert("Added", subTitle: "added new semester", style: AlertStyle.success)
+                    self.tableView.reloadData()
+                }
+            }
+        }))
         
-//        self.navigationItem.rightBarButtonItem = 
-//        emptyStateBackgroundColor
-//        self.emptyStateBackgroundColor.set()
-//        emptyStateBackgroundColor.set
-//        emptyStateView
-     
-//        self.emptyStateBackgroundColor = [UIColor.blue]
-//        self.navigationItem.leftBarButtonItem = self.
+        let cancelAction = UIAlertAction(title:"cancel", style: UIAlertActionStyle.cancel, handler: nil)
+        alertController.addTextField(configurationHandler: ({
+            (textfield) in
+            textfield.placeholder = "semester"
+        }))
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
 
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        emptyStateViewWillShow(view: emptyStateView)
-        self.reloadEmptyState()
+    
+    func saveSem(semItem : String) {
+//        controls the item to be saved
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let item1 = Semester(context: context)
+//        item.setValue(semItem, forKey: "sem")
+        item1.sem = semItem
+//        item1.sem = semItem
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        self.navigationController!.popViewController(animated: true)
+        
     }
-    
-
-    public var emptyStateView: UIView {
-       
-        get {
-            let r : CGFloat = 30.0
-            let buttonSize = CGSize(width:150, height:30)
-            let emptyStateView = UIEmptyStateView(frame: self.view.frame, title: NSMutableAttributedString(string: "No Semesters"))
-            // Call and assign the data source methods
-            emptyStateView.image = #imageLiteral(resourceName: "icons8-backpack-50.png")
-            emptyStateView.imageSize = emptyStateImageSize
-            emptyStateView.imageViewTintColor = UIColor.blue
-            emptyStateView.buttonSize = buttonSize
-            emptyStateView.detailMessage = NSMutableAttributedString(string: "You can add a semesters by tapping the + button")
-            emptyStateView.spacing = r
-            emptyStateView.centerYOffset = emptyStateViewCenterYOffset
-            emptyStateView.backgroundColor = emptyStateBackgroundColor
-            // Some auto resize constraints
-            emptyStateView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            return emptyStateView
-        }
-    }
-    
-    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+////        self.tableView.reloadData()
+////        tableView.reloadData()
+//    }
+//
     override func viewWillAppear(_ animated: Bool) {
 
         getItem()
         tableView.reloadData()
-//        self.reloadEmptyState()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -92,7 +102,7 @@ class semesterTableViewController: UITableViewController, UIEmptyStateDataSource
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let sem1 = semesters[indexPath.row]
-        cell.textLabel?.text = sem1.sem
+        cell.textLabel?.text = sem1.value(forKey: "sem") as! String
         
         return cell
 
@@ -103,12 +113,6 @@ class semesterTableViewController: UITableViewController, UIEmptyStateDataSource
         
         let sem1 = semesters[indexPath.row]
         self.performSegue(withIdentifier: "addCourse", sender: sem1)
-//        placeholderTableView?.showNoResultsPlaceholder()
-    }
-    
-    @IBAction func addSemBtn(_ sender: Any) {
-//        Placeholder.
-         placeholderTableView?.showLoadingPlaceholder()
     }
     
 //    fetching core data
