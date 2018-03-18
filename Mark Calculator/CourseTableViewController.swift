@@ -15,20 +15,84 @@ class CourseTableViewController: UITableViewController {
 //    var course2: Course!
     var course: [Course] = []
 
+    @IBOutlet var test3: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        test3.position =
+//        test3.y = 500
+//        test3.x = 200
+//        test3.position = CGPoint(x:150, y: 150)
+//
+        if (isEmpty == true){
+            print("yes its empty")
+//            test3.position = CGPoint(x:150, y: 150)
+            
+            tableView.separatorStyle = .none
+            tableView.backgroundView = test3
+//            tableView.backgroundView?.position = CGPoint(x:-150, y: 150)
+        }
+        else {
+            print("no its empty")
+//            tableView.separatorStyle = .default
+            tableView.backgroundView = nil
+            tableView.separatorStyle = .singleLine
+            
+//            test3.isHidden = true
+        }
+        
+//        tableView.addSubview(test3)
+        
         tableView.delegate = self
         tableView.dataSource = self
-
-         self.clearsSelectionOnViewWillAppear = false
+        
+        
+//         self.clearsSelectionOnViewWillAppear = false
+        
          self.title = sem.sem
+      
 //         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        getCourse()
-        tableView.reloadData()
+        if (isEmpty == true){
+            print("yes its empty")
+            //            tableView.addSubview(test3)
+            //                        tableView.isHidden = true
+            tableView.separatorStyle = .none
+            tableView.backgroundView = test3
+//             tableView.backgroundView?.position = CGPoint(x:-150, y: 150)
+        }
+        else {
+            print("no its empty")
+            //            tableView.separatorStyle = .default
+            tableView.backgroundView = nil
+            tableView.separatorStyle = .singleLine
+            getCourse()
+            tableView.reloadData()
+            //            test3.isHidden = true
+        }
+        
+//        getCourse()
+//        tableView.reloadData()
+    }
+    
+//    /    function to check if the item core data is empty
+    var isEmpty : Bool {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        do{
+            let fetchrequest:NSFetchRequest<Course> = Course.fetchRequest()
+            let predict = NSPredicate(format: "%K == %@", "sem", sem)
+            fetchrequest.predicate = predict
+            let count = try context.count(for: fetchrequest)
+            return count == 0 ? true : false
+        }catch{
+            return true
+        }
+        
     }
  
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,17 +137,24 @@ class CourseTableViewController: UITableViewController {
         if editingStyle == .delete {
             managedContext.delete(courseItem)
             
-            do {
-                try managedContext.save()
-            }catch {
-                print("error")
-            }
-            
-            do {
-                course = try managedContext.fetch(Course.fetchRequest()) as! [Course]
-            } catch {
-                print("error")
-            }
+//            if (isEmpty == true) {
+//                print("hey")
+//                tableView.separatorStyle = .none
+//                tableView.backgroundView = test3
+//            }
+//            else{
+                do {
+                    try managedContext.save()
+                }catch {
+                    print("error")
+                }
+                
+                do {
+                    course = try managedContext.fetch(Course.fetchRequest()) as! [Course]
+                } catch {
+                    print("error")
+                }
+//            }
             
              tableView.reloadData()
             
