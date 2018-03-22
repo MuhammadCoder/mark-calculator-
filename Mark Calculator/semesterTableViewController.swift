@@ -47,6 +47,8 @@ class semesterTableViewController: UITableViewController{
                     self.saveSem(semItem: field.text!)
                     
                      SweetAlert().showAlert("Added", subTitle: "added new semester", style: AlertStyle.success)
+
+                    self.getItem()
                     self.tableView.reloadData()
                 }
             }
@@ -68,20 +70,14 @@ class semesterTableViewController: UITableViewController{
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let item1 = Semester(context: context)
-//        item.setValue(semItem, forKey: "sem")
+
         item1.sem = semItem
-//        item1.sem = semItem
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        self.navigationController!.popViewController(animated: true)
+         tableView.reloadData()
         
     }
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-////        self.tableView.reloadData()
-////        tableView.reloadData()
-//    }
-//
+
     override func viewWillAppear(_ animated: Bool) {
 
         getItem()
@@ -100,10 +96,10 @@ class semesterTableViewController: UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
         let sem1 = semesters[indexPath.row]
-        cell.textLabel?.text = sem1.value(forKey: "sem") as! String
-        
+        cell.textLabel?.text = sem1.value(forKey: "sem") as? String
+//        tableView.reloadData()
         return cell
 
     }

@@ -9,6 +9,17 @@
 import UIKit
 import CoreData
 
+//class that has the labels on the table
+class yourclass2: UITableViewCell {
+    
+    @IBOutlet var item: UILabel!
+    
+    @IBOutlet var worth: UILabel!
+    @IBOutlet var mark: UILabel!
+    
+    
+}
+
 class itemListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
 
@@ -35,9 +46,13 @@ class itemListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableview.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableview.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! yourclass2
         let item1 = test[indexPath.row]
-        cell.textLabel?.text = item1.courseItem
+        cell.item.text = item1.courseItem
+        cell.worth.text = item1.worthItem
+        cell.mark.text = item1.markItem
+//        cell.textLabel?.text = item1.courseItem
+    
         return cell
     }
     
@@ -86,15 +101,16 @@ class itemListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             }
             
             do {
-                test = try managedContext.fetch(Item.fetchRequest()) as! [Item]
+                let fetchrequest:NSFetchRequest<Item> = Item.fetchRequest()
+                let predict = NSPredicate(format: "%K == %@", "k", course)
+                fetchrequest.predicate = predict
+                test = try managedContext.fetch(fetchrequest)
             } catch {
                 print("Error")
             }
             
             tableView.reloadData();
             
-            // Delete the row from the data source
-            //            tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }

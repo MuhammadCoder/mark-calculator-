@@ -41,6 +41,10 @@ class CourseTableViewController: UITableViewController {
             
 //            test3.isHidden = true
         }
+//        self.navigationItem.leftBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target:self, action: #selector(CourseTableViewController.addCourse))
+//         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target:self, action: #selector(semesterTableViewController.addSem))
+        
         
 //        tableView.addSubview(test3)
         
@@ -55,7 +59,54 @@ class CourseTableViewController: UITableViewController {
 //         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    func addCourse() {
+//        create an alert
+        let alertController = UIAlertController(title: "New Course", message:"Enter a new course", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title:"Confirm", style:UIAlertActionStyle.default, handler: ({
+            (handler) in
+            if let field = alertController.textFields![0] as? UITextField {
+                if field.text == "" {
+                    SweetAlert().showAlert("Error", subTitle: "left empty", style: AlertStyle.error)
+                }
+                else {
+                    self.saveCourse(course: field.text!)
+                    
+                    SweetAlert().showAlert("Added", subTitle: "added new semester", style: AlertStyle.success)
+                    //                    print("hy")
+//                    self.viewWillAppear(false)
+//                    self.tableView.reloadData()
+                    self.viewWillAppear(false)
+                    
+                }
+            }
+        }))
+        
+        let cancelAction = UIAlertAction(title:"cancel", style: UIAlertActionStyle.cancel, handler: nil)
+        alertController.addTextField(configurationHandler: ({
+            (textfield) in
+            textfield.placeholder = "semester"
+        }))
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+    
+    func saveCourse(course: String) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let courseItem = Course(context: context)
+        courseItem.name = course
+//        courseItem.name = courseTextField.text
+        
+        sem.addToCourse(courseItem)
+        
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+//        navigationController!.popViewController(animated: true)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if (isEmpty == true){
             print("yes its empty")
             //            tableView.addSubview(test3)
@@ -73,6 +124,8 @@ class CourseTableViewController: UITableViewController {
             tableView.reloadData()
             //            test3.isHidden = true
         }
+        tableView.reloadData()
+        
         
 //        getCourse()
 //        tableView.reloadData()
@@ -136,13 +189,7 @@ class CourseTableViewController: UITableViewController {
         
         if editingStyle == .delete {
             managedContext.delete(courseItem)
-            
-//            if (isEmpty == true) {
-//                print("hey")
-//                tableView.separatorStyle = .none
-//                tableView.backgroundView = test3
-//            }
-//            else{
+
                 do {
                     try managedContext.save()
                 }catch {
@@ -150,7 +197,10 @@ class CourseTableViewController: UITableViewController {
                 }
                 
                 do {
-                    course = try managedContext.fetch(Course.fetchRequest()) as! [Course]
+                    let fetchrequest:NSFetchRequest<Course> = Course.fetchRequest()
+                    let predict = NSPredicate(format: "%K == %@", "sem", sem)
+                    fetchrequest.predicate = predict
+                    course = try managedContext.fetch(fetchrequest)
                 } catch {
                     print("error")
                 }
@@ -182,17 +232,17 @@ class CourseTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "courseAdd" {
-            let destination = segue.destination as! AddCourseViewController
-            destination.sem = sem
-        }
+//        if segue.identifier == "courseAdd" {
+//            let destination = segue.destination as! AddCourseViewController
+//            destination.sem = sem
+//        }
 //        
 //       else if segue.identifier == "addItem" {
 //            let destination2 = segue.destination as! VC
 //            destination2.course = sender as! Course
 ////            destination2.course = course2
 //        }
-        else if segue.identifier == "viewItem"{
+        if segue.identifier == "viewItem"{
             let destination3 = segue.destination as! courseVC
             destination3.course = sender as! Course
         }

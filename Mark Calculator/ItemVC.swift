@@ -50,6 +50,8 @@ class ItemVC: UIViewController {
             let itemContent = Item(context: context)
             course.addToIt(itemContent)
             itemContent.courseItem = itemTxt.text
+            itemContent.worthItem = worthTxt.text
+            itemContent.markItem = markTxt.text
 //            course.addToIt(itemContent)
             
             
