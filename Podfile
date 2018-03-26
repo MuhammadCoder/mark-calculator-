@@ -6,6 +6,7 @@ target 'Mark Calculator' do
     pod 'Material', '~> 2.8'
     pod 'RAMAnimatedTabBarController', '~> 3.0'
     pod 'SkyFloatingLabelTextField', '~> 3.0'
+    pod 'QuickTableViewController', '~> 0.8'
 
   target 'Mark CalculatorTests' do
     inherit! :search_paths

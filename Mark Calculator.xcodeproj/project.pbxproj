@@ -11,6 +11,7 @@
 		52025678203BFD6500007032 /* GradeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52025677203BFD6500007032 /* GradeVC.swift */; };
 		5202567A203C0EFA00007032 /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52025679203C0EFA00007032 /* ItemVC.swift */; };
 		52057938203BDAE900D46868 /* icons8-menu-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 52057937203BDAE900D46868 /* icons8-menu-50.png */; };
+		5209DD3B20694A5600B332E7 /* TESTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5209DD3A20694A5600B332E7 /* TESTVC.swift */; };
 		5233C9C9203CE6A7002B9452 /* icons8-plus-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5233C9C8203CE6A6002B9452 /* icons8-plus-50.png */; };
 		5233C9CB203CE9AD002B9452 /* icons8-backpack-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5233C9CA203CE9AC002B9452 /* icons8-backpack-50.png */; };
 		5233C9DC203CF9B0002B9452 /* ItemTBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233C9DA203CF9B0002B9452 /* ItemTBCell.swift */; };
@@ -87,6 +88,7 @@
 		52025677203BFD6500007032 /* GradeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeVC.swift; sourceTree = "<group>"; };
 		52025679203C0EFA00007032 /* ItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
 		52057937203BDAE900D46868 /* icons8-menu-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-menu-50.png"; sourceTree = "<group>"; };
+		5209DD3A20694A5600B332E7 /* TESTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TESTVC.swift; sourceTree = "<group>"; };
 		5233C9C8203CE6A6002B9452 /* icons8-plus-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-plus-50.png"; sourceTree = "<group>"; };
 		5233C9CA203CE9AC002B9452 /* icons8-backpack-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-backpack-50.png"; sourceTree = "<group>"; };
 		5233C9DA203CF9B0002B9452 /* ItemTBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTBCell.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				529363A31F618D7A000CE58A /* Icon-App-60x60@1x.png */,
 				529363A41F618D7A000CE58A /* Icon-App-60x60@2x.png */,
 				5271F0F01F386AD1005003AB /* Icon-App-60x60@3x.png */,
+				5209DD3A20694A5600B332E7 /* TESTVC.swift */,
 			);
 			path = "Mark Calculator";
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Mark Calculator/Pods-Mark Calculator-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/QuickTableViewController/QuickTableViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 			);
@@ -556,6 +560,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuickTableViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 			);
@@ -625,6 +630,7 @@
 				5233C9DC203CF9B0002B9452 /* ItemTBCell.swift in Sources */,
 				529363BD1F6647FD000CE58A /* AddCourseViewController.swift in Sources */,
 				52E9BFAB1F27BB4100667A28 /* ViewController.swift in Sources */,
+				5209DD3B20694A5600B332E7 /* TESTVC.swift in Sources */,
 				5202567A203C0EFA00007032 /* ItemVC.swift in Sources */,
 				52E9BFDA1F27CAE400667A28 /* aboutMe.swift in Sources */,
 				52E9BFB11F27BB4100667A28 /* Mark_Calculator.xcdatamodeld in Sources */,

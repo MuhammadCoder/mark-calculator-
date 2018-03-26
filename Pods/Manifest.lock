@@ -3,21 +3,24 @@ PODS:
   - Material (2.8.1):
     - Material/Core (= 2.8.1)
   - Material/Core (2.8.1)
+  - QuickTableViewController (0.8.3)
   - RAMAnimatedTabBarController (3.0.4)
   - SkyFloatingLabelTextField (3.4.0)
 
 DEPENDENCIES:
   - IBAnimatable (~> 4.1)
   - Material (~> 2.8)
+  - QuickTableViewController (~> 0.8)
   - RAMAnimatedTabBarController (~> 3.0)
   - SkyFloatingLabelTextField (~> 3.0)
 
 SPEC CHECKSUMS:
   IBAnimatable: 0fd2c9fd38c4798d71bcc18dbd87d473a7df2577
   Material: cc27757e6c91999ac41b2089769106a9d83364c0
+  QuickTableViewController: ee0e7fe522d4bfeea5b900f3b394c58da02e1a9f
   RAMAnimatedTabBarController: f4df798eb3f374b80448908d3a18586421efb8f6
   SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
 
-PODFILE CHECKSUM: 0cd7ba656c5726b5f715644792d270326b9af2db
+PODFILE CHECKSUM: 94f50f925ef6e62fe869f31b9300133bd5a5cb4c
 
 COCOAPODS: 1.4.0

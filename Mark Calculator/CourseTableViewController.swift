@@ -43,6 +43,8 @@ class CourseTableViewController: UITableViewController {
         }
 //        self.navigationItem.leftBarButtonItem = self.editButtonItem
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target:self, action: #selector(CourseTableViewController.addCourse))
+        self.navigationController?.navigationBar.isTranslucent = false
+//        self.navigationController?.navigationBar.tintColor = UIColor.white;
 //         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target:self, action: #selector(semesterTableViewController.addSem))
         
         
@@ -122,8 +124,8 @@ class CourseTableViewController: UITableViewController {
             tableView.separatorStyle = .singleLine
             getCourse()
             tableView.reloadData()
-            //            test3.isHidden = true
         }
+        self.navigationController?.navigationBar.isTranslucent = false
         tableView.reloadData()
         
         

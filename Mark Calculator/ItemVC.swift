@@ -26,7 +26,11 @@ class ItemVC: UIViewController {
         //        looking for a tap
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+//        self.navigationController?.navigationBar.isTranslucent = false
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+          self.navigationController?.navigationBar.isTranslucent = false
     }
     
 //    function called when there is a tap

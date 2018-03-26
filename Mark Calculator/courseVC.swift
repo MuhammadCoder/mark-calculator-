@@ -37,6 +37,15 @@ class courseVC: UIViewController {
             container1.isHidden = false
             container2.isHidden = true
         }
+//        self.navigationController?.navigationBar.setBackgroundImage(<#T##backgroundImage: UIImage?##UIImage?#>, for: <#T##UIBarMetrics#>)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.view.backgroundColor = UIColor.clear
+//        self.navigationController?.navigationBar.isTranslucent = true
+//        self.navigationController?.navigationBar.tintColor = UIColor.white;
+//        self.navigationBar.barStyle = UIBarStyle.black
+//        self.navigationBar.tintColor = UIColor.white
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,6 +61,8 @@ class courseVC: UIViewController {
             container1.isHidden = false
             container2.isHidden = true
         }
+//        self.navigationController?.navigationBar.isTranslucent = true
+//        self.navigationController?.navigationBar.tintColor = UIColor.white;
 
     }
     
@@ -64,6 +75,7 @@ class courseVC: UIViewController {
             let predict = NSPredicate(format: "%K == %@", "k", course)
             fetchrequest.predicate = predict
             let count = try context.count(for: fetchrequest)
+            viewWillAppear(false)
             return count == 0 ? true : false
         }catch{
             return true

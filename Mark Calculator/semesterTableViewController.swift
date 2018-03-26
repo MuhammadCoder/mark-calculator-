@@ -30,6 +30,7 @@ class semesterTableViewController: UITableViewController{
         self.clearsSelectionOnViewWillAppear = false
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target:self, action: #selector(semesterTableViewController.addSem))
+        self.navigationController?.navigationBar.isTranslucent = false
 
 
     }
@@ -82,6 +83,7 @@ class semesterTableViewController: UITableViewController{
 
         getItem()
         tableView.reloadData()
+        self.navigationController?.navigationBar.isTranslucent = false
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
