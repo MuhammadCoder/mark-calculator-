@@ -40,8 +40,10 @@ class courseVC: UIViewController {
 //        self.navigationController?.navigationBar.setBackgroundImage(<#T##backgroundImage: UIImage?##UIImage?#>, for: <#T##UIBarMetrics#>)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
         self.view.backgroundColor = UIColor.clear
+        self.title = course.name
 //        self.navigationController?.navigationBar.isTranslucent = true
 //        self.navigationController?.navigationBar.tintColor = UIColor.white;
 //        self.navigationBar.barStyle = UIBarStyle.black
@@ -117,8 +119,6 @@ class courseVC: UIViewController {
                 container2.isHidden = false
             }
 
-//            container1.isHidden = true
-//            container2.isHidden = false
         default:
             break
         }
