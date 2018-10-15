@@ -13,7 +13,6 @@ import CoreData
 class yourclass2: UITableViewCell {
     
     @IBOutlet var item: UILabel!
-    
     @IBOutlet var worth: UILabel!
     @IBOutlet var mark: UILabel!
     

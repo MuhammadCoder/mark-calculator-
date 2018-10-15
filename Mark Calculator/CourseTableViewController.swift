@@ -78,7 +78,6 @@ class CourseTableViewController: UITableViewController {
 //                    self.viewWillAppear(false)
 //                    self.tableView.reloadData()
                     self.viewWillAppear(false)
-                    
                 }
             }
         }))
@@ -147,7 +146,6 @@ class CourseTableViewController: UITableViewController {
         }catch{
             return true
         }
-        
     }
  
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

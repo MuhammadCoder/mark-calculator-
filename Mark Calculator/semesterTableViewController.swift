@@ -15,12 +15,26 @@ class semesterTableViewController: UITableViewController{
 
 //    setting up the core data
     var semesters : [Semester] = []
+    var course: Course!
    
     
     @IBOutlet var testView: UIView!
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        if (isEmpty == true){
+            print("yes its empty")
+            //            test3.position = CGPoint(x:150, y: 150)
+            
+            tableView.separatorStyle = .none
+            tableView.backgroundView = testView
+        }
+        else {
+            print("no its empty")
+            tableView.backgroundView = nil
+            tableView.separatorStyle = .singleLine
+        }
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -80,10 +94,26 @@ class semesterTableViewController: UITableViewController{
     }
 
     override func viewWillAppear(_ animated: Bool) {
-
-        getItem()
-        tableView.reloadData()
+//        super.viewWillAppear(animated)
+        if (isEmpty == true){
+            print("yes its empty")
+            //            tableView.addSubview(test3)
+            //                        tableView.isHidden = true
+            tableView.separatorStyle = .none
+            tableView.backgroundView = testView
+            //             tableView.backgroundView?.position = CGPoint(x:-150, y: 150)
+        }
+        
+        else {
+            print("no its empty")
+            //            tableView.separatorStyle = .default
+            tableView.backgroundView = nil
+            tableView.separatorStyle = .singleLine
+            getItem()
+            tableView.reloadData()
+        }
         self.navigationController?.navigationBar.isTranslucent = false
+        tableView.reloadData()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -124,6 +154,18 @@ class semesterTableViewController: UITableViewController{
         }
     }
     
+    //    /function to check if the item core data is empty
+    var isEmpty : Bool {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do{
+            let fetchrequest:NSFetchRequest<Semester> = Semester.fetchRequest()
+            let count = try context.count(for: fetchrequest)
+            return count == 0 ? true : false
+        }catch{
+            return true
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -146,13 +188,11 @@ class semesterTableViewController: UITableViewController{
             }catch {
                 print("Error");
             }
-            
             do {
                 semesters = try managedContext.fetch(Semester.fetchRequest()) as! [Semester]
             } catch {
                 print("Error")
             }
-            
             tableView.reloadData();
             
             // Delete the row from the data source
